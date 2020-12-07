@@ -1,0 +1,5 @@
+*.log
+
+/ai1wm-backups
+/uploads
+/upgrade
