@@ -3,3 +3,5 @@
 /ai1wm-backups
 /uploads
 /upgrade
+.DS_Store
+/languages

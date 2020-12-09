@@ -1,0 +1,31 @@
+html {
+  --red: #e00000;
+  --blue: #001aff;
+  --lightblue: #87bcde;
+  --green: #84c915;
+  --white: #f9f9f9;
+  --lightgrey: #f6f6f6;
+  --mediumgrey: #b8b8b8;
+  --darkgrey: #999999;
+  --black: #202020;
+
+  --calendar-width: 95vw;
+
+  --dosis-h1 : 600 2.5rem 'Dosis';
+  --dosis-h2 : 600 2rem 'Dosis';
+  --montserrat : 400 1rem 'Montserrat';
+}
+
+.hide {
+  max-height: 0 !important;
+}
+
+@media only screen and (min-width: 782px) {
+  html {
+    --calendar-width: 400px;
+  }
+  .hide {
+    max-height: 1400px !important;    
+  }
+}
+
