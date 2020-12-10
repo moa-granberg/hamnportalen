@@ -1,7 +1,40 @@
 // stylelint-disable value-keyword-case
-$font__main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font__main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 // stylelint-enable value-keyword-case
 $font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+// Hamnportalen typography variables
+$heading__font: "Dosis", sans-serif;
+$paragraph__font: "Montserrat", sans-serif;
+
+h1 {
+  font-family: $heading__font;
+  color: $black;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h2 {
+  font-family: $heading__font;
+  color: $black;
+  font-size: 2rem;
+  margin: 0;
+}
+
+h3 {
+  font-family: $heading__font;
+  color: $black;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+p {
+  font-family: $paragraph__font;
+  color: $black;
+  font-size: 1rem;
+  margin: 0;
+}

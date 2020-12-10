@@ -7,10 +7,10 @@
  * @package hamnportalen_tema
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
-}
+// if ( ! defined( '_S_VERSION' ) ) {
+// 	// Replace the version number of the theme on each release.
+// 	define( '_S_VERSION', '1.0.0' );
+// }
 
 if ( ! function_exists( 'hamnportalen_tema_setup' ) ) :
 	/**
@@ -136,20 +136,35 @@ function hamnportalen_tema_widgets_init() {
 }
 add_action( 'widgets_init', 'hamnportalen_tema_widgets_init' );
 
+function wpb_add_google_fonts() {
+wp_enqueue_style("wpb-google-fonts", "https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap", false); 
+wp_enqueue_style("wpb-google-fonts", "https://fonts.googleapis.com/css2?family=Montserrat&display=swap", false); 
+}
+add_action("wp_enqueue_scripts", "wpb_add_google_fonts");
+
+function add_hamnportalen_theme_styles() {
+  $version = wp_get_theme()->get("Version");
+  wp_enqueue_style("hamnportalen-style", get_template_directory_uri() . "/style.css", array(), $version, "all");
+}
+add_action("wp_enqueue_scripts", "add_hamnportalen_theme_styles");
+
+
+
 /**
  * Enqueue scripts and styles.
  */
-function hamnportalen_tema_scripts() {
-	wp_enqueue_style( 'hamnportalen_tema-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'hamnportalen_tema-style', 'rtl', 'replace' );
+// TROLIGEN ÖVERFLÖDIG KOD (ERROR)
+// function hamnportalen_tema_scripts() {
+// 	wp_enqueue_style( 'hamnportalen_tema-style', get_stylesheet_uri(), array(), _S_VERSION );
+// 	wp_style_add_data( 'hamnportalen_tema-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'hamnportalen_tema-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+// 	wp_enqueue_script( 'hamnportalen_tema-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'hamnportalen_tema_scripts' );
+// 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+// 		wp_enqueue_script( 'comment-reply' );
+// 	}
+// }
+// add_action( 'wp_enqueue_scripts', 'hamnportalen_tema_scripts' );
 
 /**
  * Implement the Custom Header feature.
