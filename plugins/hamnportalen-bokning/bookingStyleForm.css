@@ -1,0 +1,65 @@
+/* Labels of form */
+.wpdevart-booking-form .wpdevart-fild-item-container {
+  font-style: normal;
+  font-family: 'Dosis';
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* form wrapper */
+.wpdevart-booking-form {
+  border: none;
+  background-color: var(--white);
+}
+
+/* Form */
+.wpdevart-booking-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SUBMIT BUTTON */
+.wpdevart-form-section > button[type='submit'] {
+  background-color: var(--blue);
+  display: block;
+  text-transform: uppercase;
+  font-family: 'Dosis';
+  font-weight: 600;
+  border-radius: 1.4rem;
+  padding: 0.8rem 1.5rem !important;
+  width: auto;
+  margin: auto;
+}
+
+/* Lower form wrapper */
+.wpdevart-form-section {
+  margin-left: 0;
+}
+
+/* input fields & textarea */
+.wpdevart-booking-form .wpdevart-fild-item-container input[type='text'],
+.wpdevart-booking-form .wpdevart-fild-item-container textarea {
+  width: 100%;
+  resize: none;
+}
+
+/* Total box: total span */
+.wpdevart-total-price.reserv_info_row > .reserv_info_cell {
+  padding-left: 1rem;
+}
+
+/* Labels in summary */
+.reserv_info_cell {
+  text-transform: uppercase;
+  font-family: 'Dosis';
+  font-weight: 600;
+}
+
+/* removes item count & form heading */
+.wpdevart-booking-form .wpdevart-check-section .wpdevart-fild-item-container:nth-child(3),
+#check-info-1 > div:nth-child(3),
+.wpdevart-booking-form h4 {
+  display: none !important;
+}

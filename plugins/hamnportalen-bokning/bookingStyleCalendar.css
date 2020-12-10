@@ -1,0 +1,167 @@
+/* WRAPPER */
+.calendar-wrapper {
+  background-color: var(--lightblue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media only screen and (min-width: 782px) {
+  .calendar-wrapper {
+    width: 400px;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    position: relative;
+
+    /* Ändra margin senare! */
+    margin: auto;
+  }
+}
+
+/* Header-wrapper */
+.calendar-wrapper__header {
+  width: 100%;
+  text-align: center;
+}
+
+/* Heading */
+.calendar-wrapper__h2 {
+  color: var(--white);
+  font: var(--dosis-h2);
+  margin: 10px 0;
+}
+
+/* Main calendar container */
+.booking_calendar_main_container {
+  font-family: Montserrat;
+  width: var(--calendar-width);
+  margin: 0 auto 0.5rem auto;
+  padding: 0 0.2rem;
+  background-color: var(--white);
+  border-radius: 0.4rem;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  max-height: 80vh;
+  transition: max-height 0.4s ease-in-out;
+}
+
+@media only screen and (min-width: 782px) {
+  .booking_calendar_main_container {
+    border-radius: 0;
+    max-height: 1400px;
+    margin: auto;
+    overflow-y: hidden;
+  }
+}
+
+.booking_calendar_container {
+  margin: 0;
+}
+
+/* Links in calendar */
+.booking_calendar_main_container a {
+  text-decoration: none;
+  padding: 0 0.2rem;
+  color: var(--black);
+}
+
+/* Calendar header (month & year) */
+.wpda-booking-calendar-head {
+  font-family: 'Dosis';
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--black);
+  border: none;
+  background-color: var(--white);
+}
+
+/* Next month label */
+.booking_calendar_container .wpda-month-name {
+  display: inline-block;
+}
+
+/* calender day container */
+.wpdevart-calendar-container > div {
+  border: none !important;
+  background-color: var(--white);
+}
+
+/* content of calendar day container */
+.wpdevart-calendar-container > div .wpda-day-header {
+  border: 0.2rem solid var(--white);
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--darkgrey) !important;
+  cursor: auto;
+  border-radius: 0.5rem;
+}
+
+/* Available */
+.wpdevart-calendar-container > div.wpdevart-available .wpda-day-header {
+  color: var(--black) !important  ;
+  background-color: var(--mediumgrey);
+  cursor: pointer;
+}
+
+/* available hover */
+.wpdevart-calendar-container > div.wpdevart-available .wpda-day-header:hover {
+  background-color: var(--lightblue);
+}
+
+.wpdevart-calendar-container > div.past-day .wpda-day-header {
+  background-color: var(--white);
+  color: var(--darkgrey) !important;
+
+}
+
+/* booked */
+.wpdevart-calendar-container > div.wpdevart-booked .wpda-day-header {
+  background-color: var(--white) !important;
+}
+
+/* selected's container*/
+.wpdevart-calendar-container > div {
+  box-shadow: none !important;
+}
+
+/* selected's header*/
+.wpdevart-calendar-container > div.wpdevart-available.selected .wpda-day-header {
+  color: var(--white) !important;
+}
+
+/* dates */
+.wpda-day-number {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* dates span */
+.wpda-day-number > span {
+  font-family: 'Dosis';
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* price, availability, legends-status */
+.day-availability,
+.day-price,
+.wpdevart-booking-legends {
+  display: none;
+}
+
+body.wp-admin .booking_calendar_main {
+  width: 400px;
+}
