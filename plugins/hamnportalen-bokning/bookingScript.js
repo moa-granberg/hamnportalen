@@ -45,12 +45,9 @@ const submitForm = () => {
   const surname = document.querySelector('#wpdevart_form_field2').value;
   const email = document.querySelector('#wpdevart_form_field3').value;
   const phone = document.querySelector('#wpdevart_form_field4').value;
-  const message = document.querySelector('#wpdevart_form_field5').value;
 
   if (checkIn && checkOut && boatSize && name && surname && phone && validEmail(email)) {
-    console.log('yey');
-  } else {
-    console.log('ney');
+    window.location.href = `${window.location.href.split('blog')[0]}bokningsbekraftelse`;
   }
 };
 
