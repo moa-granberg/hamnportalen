@@ -5,5 +5,5 @@
 		"../../sass/components/pages/booking-confirmation.scss"
 	],
 	"names": [],
-	"mappings": "AAAA,AAAA,QAAQ,CAAC;CACL,UAAU,EAAE,MAAM;CAClB,UAAU,EAAE,KAAK;CACpB"
+	"mappings": "AAAA,AAAA,QAAQ,CAAC;CACL,UAAU,EAAE,MAAM;CAClB,UAAU,EAAE,KAAK;CACjB,MAAM,EAAE,IAAI;CACf"
 }
