@@ -2,6 +2,7 @@
   border-radius: 10rem;
   background: $blue;
   color: $white;
+  cursor: pointer;
   line-height: 1;
   padding: 0.8rem 1.5rem;
   display: block;
@@ -19,6 +20,7 @@
 .secondary_btn {
   background: none;
   color: $black;
+  cursor: pointer;
   line-height: 1;
   padding: 0.8rem 1.5rem;
   display: block;

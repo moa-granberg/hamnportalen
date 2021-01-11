@@ -1,0 +1,39 @@
+.hp_input_wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    box-shadow: 5px 8px 23px rgba($blue, 0.37);
+    overflow: hidden;
+    border-radius: 10rem;
+    margin: 0 1rem;
+    border: 1px solid $white;
+
+    &:focus-within {
+        border: 1px solid $blue;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: inherit;
+        margin-left: 1rem;
+
+        span {
+            @include dosisStyle(1rem, $black);
+            padding: .5rem 0 0 .5rem;
+        }
+
+        input[type="text"] {
+        	margin-left: 0.5rem;
+        }
+    }
+
+    .primary_btn {
+        margin: 1rem;
+    }
+}
+
+.hp_search_form {
+    max-width: 600px;
+}

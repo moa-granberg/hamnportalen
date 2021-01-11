@@ -24,3 +24,11 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
+@mixin dosisStyle($size, $color) {
+  font-family: "Dosis";
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: $size;
+  color: $color;
+}

@@ -20,9 +20,9 @@
       <div class="follow">
       <h2>FÖLJ <?php echo strtoupper(get_bloginfo('name')); ?></h2>
       <div class="social-media">
-	  <img src="./wp-content/themes/hamnportalen_tema/assets/images/instagram.png" alt="instagram"/>
-	  <img src="./wp-content/themes/hamnportalen_tema/assets/images/facebook.png" alt="facebook"/>
-	  <img src="./wp-content/themes/hamnportalen_tema/assets/images/youtube.png" alt="youtube"/>
+		<img src="<?php echo get_theme_file_uri('/assets/images/instagram.png'); ?>" alt="instagram"/>
+		<img src="<?php echo get_theme_file_uri('/assets/images/facebook.png'); ?>" alt="facebook"/>
+		<img src="<?php echo get_theme_file_uri('/assets/images/youtube.png'); ?>" alt="youtube"/>
     </div>
     </div>
     <div class="contact">

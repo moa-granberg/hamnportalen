@@ -568,6 +568,7 @@ a:hover, a:active {
 	border-radius: 10rem;
 	background: #001aff;
 	color: #f9f9f9;
+	cursor: pointer;
 	line-height: 1;
 	padding: 0.8rem 1.5rem;
 	display: block;
@@ -585,6 +586,7 @@ a:hover, a:active {
 .secondary_btn {
 	background: none;
 	color: #202020;
+	cursor: pointer;
 	line-height: 1;
 	padding: 0.8rem 1.5rem;
 	display: block;
@@ -615,10 +617,14 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	background-color: #f9f9f9;
+	color: #999999;
+	border: none;
 	border-radius: 3px;
-	padding: 3px;
+	padding: 0;
+	width: 100%;
+	font-family: "Dosis";
+	font-size: 1.2rem;
 }
 
 input[type="text"]:focus,
@@ -637,11 +643,12 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	color: #202020;
+	outline: none;
 }
 
 select {
-	border: 1px solid #ccc;
+	border: none;
 }
 
 textarea {
@@ -936,6 +943,52 @@ textarea {
 /* Re-display the Theme Footer when Infinite Scroll has reached its end. */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+/* Hamnportalen style
+--------------------------------------------- */
+.hp_input_wrapper {
+	display: flex;
+	justify-content: space-between;
+	background-color: #f9f9f9;
+	box-shadow: 5px 8px 23px rgba(0, 26, 255, 0.37);
+	overflow: hidden;
+	border-radius: 10rem;
+	margin: 0 1rem;
+	border: 1px solid #f9f9f9;
+}
+
+.hp_input_wrapper:focus-within {
+	border: 1px solid #001aff;
+}
+
+.hp_input_wrapper label {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: inherit;
+	margin-left: 1rem;
+}
+
+.hp_input_wrapper label span {
+	font-family: "Dosis";
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1rem;
+	color: #202020;
+	padding: .5rem 0 0 .5rem;
+}
+
+.hp_input_wrapper label input[type="text"] {
+	margin-left: 0.5rem;
+}
+
+.hp_input_wrapper .primary_btn {
+	margin: 1rem;
+}
+
+.hp_search_form {
+	max-width: 600px;
 }
 
 /*--------------------------------------------------------------
