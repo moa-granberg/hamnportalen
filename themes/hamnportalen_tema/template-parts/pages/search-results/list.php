@@ -13,6 +13,23 @@ if ($_GET['search_params']) {
     AND post_type = 'post'
     ");
 
+
+  //sorts by alphabetical order if alpha is posted
+  if (isset($_POST['alpha'])) {
+    function cmp($a, $b) {
+      return strcmp($a->post_title, $b->post_title);
+    }
+    usort($results, 'cmp');
+  }
+
+  //sorts by lowest price if price is posted
+  if (isset($_POST['price'])) {
+    function cmp($a, $b) {
+      return strcmp(get_field('price', $a->ID), get_field('price', $b->ID),);
+    }
+    usort($results, 'cmp');
+  }
+
   $ports_html = '';
 
   foreach($results as $port) {
@@ -72,14 +89,6 @@ if ($_GET['search_params']) {
         <img src='$port_image1'>
       </a>";
   }
-}
-
-if (isset($_POST['alpha'])) {
-  echo 'alpha';
-}
-
-if (isset($_POST['price'])) {
-  echo 'price';
 }
 
 echo "
