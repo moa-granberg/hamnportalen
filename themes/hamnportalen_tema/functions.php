@@ -149,9 +149,9 @@ function add_hamnportalen_theme_styles() {
 add_action("wp_enqueue_scripts", "add_hamnportalen_theme_styles");
 
 function add_hamnportalen_map_search_api_script() {
-	wp_enque_style('mapScript', get_template_directory_uri() . "/template-parts/pages/search-results/scripts/mapScript.js");
+	wp_enqueue_script('mapScript', get_template_directory_uri() . "/template-parts/pages/search-results/scripts/mapScript.js");
 }
-add_action("wp_enque_scripts", "add_hamnportalen_map_search_api_script");
+add_action("wp_enqueue_scripts", "add_hamnportalen_map_search_api_script");
 
 // ENDPOINTS
 
