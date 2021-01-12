@@ -9,6 +9,8 @@ if ($_GET['search_params']) {
     "SELECT * FROM $table_name 
     WHERE post_title LIKE '$search_query%'
     AND post_status = 'publish'");
+
+  $ports_html = '';
   
   foreach($results as $port) {
     //Values
@@ -21,5 +23,48 @@ if ($_GET['search_params']) {
     $port_restaurant = array_search('Restaurang', $port_facilities);
     $port_bath = array_search('Badplats', $port_facilities);
     $port_internet = array_search('Internet', $port_facilities);
+
+    $facilities = "";
+
+    if($port_restaurant) {
+      // $restaurant_url = __DIR__ .  "/images/restaurant.svg";
+      $restaurant_url = get_theme_file_uri('/assets/images/restaurant.svg');
+
+      echo $restaurant_url;
+      $facilities = $facilities . "
+        <div>
+          <img src='$restaurant_url'>
+          <h4>Restaurang</h4>
+        </div>
+      ";
+    }
+    if($port_bath) {
+      $facilities = $facilities . "
+        <div>
+          <img src='#'>
+          <h4>Badplats</h4>
+        </div>
+      ";
+    }
+    if($port_internet) {
+      $facilities = $facilities . "
+        <div>
+          <img src='#'>
+          <h4>Internet</h4>
+        </div>
+      ";
+    }
+
+    $ports_html = $ports_html . "
+      <div class='search-result-port-wrapper'>
+        <div class='search-result-text-wrapper'>
+          <h2>$port_name</h2>
+          <h4>$port_price kr/dygn</h4>
+          $facilities
+        </div>
+        <img src='$port_image1'>
+      </div>";
+
   }
 }
+echo $ports_html;
