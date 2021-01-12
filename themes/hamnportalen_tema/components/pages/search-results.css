@@ -2,4 +2,21 @@
 	display: flex;
 }
 
+.search-results-main-wrapper .search-result-port-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.search-results-main-wrapper .search-result-port-wrapper .search-result-text-wrapper {
+	text-transform: uppercase;
+}
+
+.search-results-main-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-facility-wrapper {
+	display: flex;
+}
+
+.search-results-main-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-facility-wrapper img {
+	margin-right: 0.75rem;
+}
+
 /*# sourceMappingURL=search-results.css.map */

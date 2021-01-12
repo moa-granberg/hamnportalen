@@ -70,6 +70,13 @@ h3 {
 	margin: 0;
 }
 
+h4 {
+	font-family: "Dosis", sans-serif;
+	color: #202020;
+	font-size: 1rem;
+	margin: 0;
+}
+
 p {
 	font-family: "Montserrat", sans-serif;
 	color: #202020;
@@ -932,7 +939,65 @@ textarea {
 /* Pages
 --------------------------------------------- */
 .search-results-main-wrapper {
+	display: grid;
+	grid: 1fr / 1fr 1fr;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper {
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-port-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 500px;
+	background-color: #eaeaea;
+	padding: 1rem;
+	margin: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-port-wrapper:hover {
+	box-shadow: 0 0 23px rgba(32, 32, 32, 0.5);
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper {
+	text-transform: uppercase;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper h2 {
+	font-weight: 400;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper h4 {
+	margin: 0;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-price {
+	color: #e00000;
+	margin-bottom: 2rem;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-facility-wrapper {
+	display: flex;
+	margin: 0.75rem 0;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-facility-wrapper img {
+	margin: 0 0.75rem 0 0;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-port-wrapper img {
+	width: 270px;
+	height: 200px;
+	object-fit: cover;
 }
 
 /*--------------------------------------------------------------

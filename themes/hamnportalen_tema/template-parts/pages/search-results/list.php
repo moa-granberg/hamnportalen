@@ -31,27 +31,27 @@ if ($_GET['search_params']) {
     if($port_restaurant) {
       $restaurant_url = get_theme_file_uri('/assets/images/restaurant.svg');
       $facilities = $facilities . "
-      <div>
-      <img src='$restaurant_url'>
-      <h4>Restaurang</h4>
-      </div>
+        <div class='search-result-facility-wrapper'>
+          <img src='$restaurant_url'>
+          <h4>Restaurang</h4>
+        </div>
       ";
     }
 
     if($port_bath) {
       $bath_url = get_theme_file_uri('/assets/images/pool.svg');
       $facilities = $facilities . "
-      <div>
-      <img src='$bath_url'>
-      <h4>Badplats</h4>
-      </div>
+        <div class='search-result-facility-wrapper'>
+          <img src='$bath_url'>
+          <h4>Badplats</h4>
+        </div>
       ";
     }
 
     if($port_internet) {
       $internet_url = get_theme_file_uri('/assets/images/wifi.svg');
       $facilities = $facilities . "
-        <div>
+        <div class='search-result-facility-wrapper'>
           <img src='$internet_url'>
           <h4>Internet</h4>
         </div>
@@ -63,11 +63,16 @@ if ($_GET['search_params']) {
       <div class='search-result-port-wrapper'>
         <div class='search-result-text-wrapper'>
           <h2>$port_name</h2>
-          <h4>$port_price kr/dygn</h4>
+          <h4 class='search-result-price'>$port_price kr/dygn</h4>
           $facilities
         </div>
         <img src='$port_image1'>
       </div>";
   }
 }
-echo $ports_html;
+
+echo "
+  <article class='search-result-list-wrapper'>
+    $ports_html
+  </article>
+";
