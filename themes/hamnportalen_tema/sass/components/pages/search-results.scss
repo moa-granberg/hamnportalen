@@ -1,16 +1,19 @@
 .search-results-main-wrapper {
-  display: grid;
-  grid: 1fr / 1fr 1fr;
+  @media screen and (min-width: $desktop_bp) {
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+  }
 
   .search-result-list-wrapper {
     @include flexColumnCenter;
 
     .search-result-port-wrapper {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       align-items: center;
 
-      min-width: 500px;
+      width: 300px;
       background-color: $lightgrey;
       padding: 1rem;
       margin: 0.5rem 1rem;
@@ -18,12 +21,19 @@
 
       cursor: pointer;
 
+      @media screen and (min-width: $desktop_bp) {
+        flex-direction: row;
+        min-width: 500px;
+        width: auto;
+      }
+
       &:hover {
-        box-shadow: 0 0 23px rgba($black, .5);
+        box-shadow: 0 0 23px rgba($black, 0.5);
       }
 
       .search-result-text-wrapper {
         text-transform: uppercase;
+        width: 100%;
 
         h2 {
           font-weight: 400;
@@ -47,6 +57,10 @@
             height: 1.5rem;
             width: 1.5rem;
           }
+        }
+
+        @media screen and (min-width: $desktop_bp) {
+          width: auto;
         }
       }
 
