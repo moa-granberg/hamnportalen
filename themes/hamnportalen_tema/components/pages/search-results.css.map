@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "search-results.css",
+	"sources": [
+		"../../sass/components/pages/search-results.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,4BAA4B,CAAC;CAC3B,OAAO,EAAE,IAAI;CACd"
+}

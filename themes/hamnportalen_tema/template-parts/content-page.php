@@ -9,7 +9,7 @@
 
 if ( get_the_ID() == 72 ) {
 
-	require_once(__DIR__ . '/pages/search-result.php');
+	require_once(__DIR__ . '/pages/search-results/search-results.php');
 
 } else {
 
