@@ -148,6 +148,8 @@ function add_hamnportalen_theme_styles() {
 }
 add_action("wp_enqueue_scripts", "add_hamnportalen_theme_styles");
 
+// ENDPOINTS
+
 function get_ports($search_term) {
 	$search_query = $search_term['search_term'];
 	
