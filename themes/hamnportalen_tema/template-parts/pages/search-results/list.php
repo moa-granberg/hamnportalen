@@ -21,6 +21,7 @@ if ($_GET['search_params']) {
     $port_price = get_field('price', $port->ID);
     $port_image1 = get_field('hero_img_1', $port->ID);
     $port_facilities = get_field('facilities', $port->ID);
+    $port_url = get_post_permalink($port->ID, true);
 
     //Booleans
     $port_restaurant = array_search('Restaurang', $port_facilities);
@@ -62,14 +63,14 @@ if ($_GET['search_params']) {
 
     //create port-card html
     $ports_html = $ports_html . "
-      <div class='search-result-port-wrapper'>
+      <a href='$port_url' class='search-result-port-wrapper'>
         <div class='search-result-text-wrapper'>
           <h2>$port_name</h2>
           <h4 class='search-result-price'>$port_price kr/dygn</h4>
           $facilities
         </div>
         <img src='$port_image1'>
-      </div>";
+      </a>";
   }
 }
 
