@@ -148,7 +148,37 @@ function add_hamnportalen_theme_styles() {
 }
 add_action("wp_enqueue_scripts", "add_hamnportalen_theme_styles");
 
+function get_ports($search_term) {
+	$search_query = $search_term['search_term'];
+	
+	global $wpdb;
+	$table_name = $wpdb->prefix . "posts";
 
+	$posts = $wpdb->get_results(
+		"SELECT * FROM $table_name 
+		WHERE post_title LIKE '$search_query%'
+		AND post_status = 'publish'");
+	
+	$ports_info_arr = array();
+	foreach($posts as $post) {
+		// make a new query for each unique postID
+		$postID = $post->ID;
+		$table = $wpdb->prefix . "postmeta";
+		$port_fields = $wpdb->get_results(
+			"SELECT * FROM $table
+			WHERE post_id = $postID");
+		
+		array_push($ports_info_arr, $port_fields);
+	}
+	return $ports_info_arr;
+}
+
+add_action( 'rest_api_init', function() {
+  register_rest_route( 'mapsearch', '/search/(?P<search_term>\S+)', array(
+    'methods' => 'GET',
+    'callback' => 'get_ports'
+  ) );
+} );
 
 /**
  * Enqueue scripts and styles.
