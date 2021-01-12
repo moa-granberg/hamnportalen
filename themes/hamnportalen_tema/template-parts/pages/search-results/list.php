@@ -74,7 +74,21 @@ if ($_GET['search_params']) {
   }
 }
 
+if (isset($_POST['alpha'])) {
+  echo 'alpha';
+}
+
+if (isset($_POST['price'])) {
+  echo 'price';
+}
+
 echo "
+  <form class='search-result-sorting-form' action='' method='POST'>
+    <p>Sortera efter:</p>
+    <input type='submit' value='A-Ö' name='alpha' />
+    <input type='submit' value='Pris' name='price' />
+  </form>
+
   <article class='search-result-list-wrapper'>
     $ports_html
   </article>
