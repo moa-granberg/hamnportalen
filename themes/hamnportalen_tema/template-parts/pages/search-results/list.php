@@ -9,7 +9,9 @@ if ($_GET['search_params']) {
   $results = $wpdb->get_results(
     "SELECT * FROM $table_name 
     WHERE post_title LIKE '$search_query%'
-    AND post_status = 'publish'");
+    AND post_status = 'publish'
+    AND post_type = 'post'
+    ");
 
   $ports_html = '';
 
