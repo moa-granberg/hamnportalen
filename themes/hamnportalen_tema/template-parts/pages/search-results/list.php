@@ -92,13 +92,13 @@ if ($_GET['search_params']) {
 }
 
 echo "
-  <form class='search-result-sorting-form' action='' method='POST'>
-    <p>Sortera efter:</p>
-    <input type='submit' value='A-Ö' name='alpha' />
-    <input type='submit' value='Pris' name='price' />
-  </form>
-
   <article class='search-result-list-wrapper'>
+    <form class='search-result-sorting-form' action='' method='POST'>
+      <p>Sortera efter:</p>
+      <input type='submit' value='A-Ö' name='alpha' />
+      <input type='submit' value='Pris' name='price' />
+    </form>
+
     $ports_html
   </article>
 ";

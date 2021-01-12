@@ -7,6 +7,29 @@
   .search-result-list-wrapper {
     @include flexColumnCenter;
 
+    @media screen and (min-width: $desktop_bp) {
+      align-items: flex-start;
+    }
+
+    .search-result-sorting-form {
+      display: flex;
+      margin-left: 1rem;
+      text-transform: uppercase;
+      
+      input[type='submit'] {
+        border: none;
+        background-color: transparent;
+        margin-left: 1rem;
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
     .search-result-port-wrapper {
       display: flex;
       flex-direction: column;

@@ -952,6 +952,31 @@ textarea {
 	align-items: center;
 }
 
+@media screen and (min-width: 782px) {
+	.search-results-main-wrapper .search-result-list-wrapper {
+		align-items: flex-start;
+	}
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-sorting-form {
+	display: flex;
+	margin-left: 1rem;
+	text-transform: uppercase;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-sorting-form input[type='submit'] {
+	border: none;
+	background-color: transparent;
+	margin-left: 1rem;
+	font-family: 'Montserrat';
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-sorting-form input[type='submit']:hover {
+	text-decoration: underline;
+}
+
 .search-results-main-wrapper .search-result-list-wrapper .search-result-port-wrapper {
 	display: flex;
 	flex-direction: column;
