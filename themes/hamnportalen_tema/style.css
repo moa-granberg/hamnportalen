@@ -939,14 +939,28 @@ textarea {
 	display: none;
 }
 
+form.show-search-result-mobile {
+	position: fixed;
+	bottom: 1rem;
+	left: 0;
+	right: 0;
+}
+
+form.show-search-result-mobile > input {
+	margin: auto;
+	padding: 1.2rem 2.5rem;
+}
+
 @media screen and (min-width: 782px) {
-	form.show-search-result-mobile, form.hide-search-result-mobile {
+	form.show-search-result-mobile,
+	form.hide-search-result-mobile {
 		display: none;
 	}
 }
 
 @media screen and (min-width: 782px) {
-	div.show-search-result-mobile, div.hide-search-result-mobile {
+	div.show-search-result-mobile,
+	div.hide-search-result-mobile {
 		display: block;
 	}
 }

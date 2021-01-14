@@ -22,8 +22,8 @@ if (isset($_POST["list"])) {
 </section>
 
 <form class="<?php echo $listClass ?>" action="" method="POST">
-  <input type="submit" value="Karta" name="map">
+  <input type="submit" value="Karta" name="map" class="primary_btn">
 </form>
 <form class="<?php echo $mapClass ?>" action="" method="POST">
-  <input type="submit" value="Lista" name="list">
+  <input type="submit" value="Lista" name="list" class="primary_btn">
 </form>

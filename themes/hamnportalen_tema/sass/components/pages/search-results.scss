@@ -6,19 +6,28 @@
   display: none;
 }
 
-.show-search-result-mobile {
+form.show-search-result-mobile {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
 
+  > input {
+    margin: auto;
+    padding: 1.2rem 2.5rem;
+  }
 }
 
-form.show-search-result-mobile, form.hide-search-result-mobile {
+form.show-search-result-mobile,
+form.hide-search-result-mobile {
   @media screen and (min-width: $desktop_bp) {
     display: none;
   }
 }
 
-div.show-search-result-mobile, div.hide-search-result-mobile {
+div.show-search-result-mobile,
+div.hide-search-result-mobile {
   @media screen and (min-width: $desktop_bp) {
     display: block;
   }
 }
-
