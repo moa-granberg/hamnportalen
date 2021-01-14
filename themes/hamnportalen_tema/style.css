@@ -950,6 +950,8 @@ textarea {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	height: 80vh;
+	justify-content: flex-start;
 }
 
 @media screen and (min-width: 782px) {
@@ -1042,6 +1044,16 @@ textarea {
 	width: 270px;
 	height: 200px;
 	object-fit: cover;
+}
+
+.search-results-main-wrapper .search-result-list-wrapper .search-result-list-error-wrapper {
+	text-align: center;
+	flex: 1;
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 /*--------------------------------------------------------------

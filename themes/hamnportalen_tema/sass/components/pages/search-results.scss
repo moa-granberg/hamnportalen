@@ -6,6 +6,8 @@
 
   .search-result-list-wrapper {
     @include flexColumnCenter;
+    height: 80vh;
+    justify-content: flex-start;
 
     @media screen and (min-width: $desktop_bp) {
       align-items: flex-start;
@@ -93,6 +95,13 @@
         height: 200px;
         object-fit: cover;
       }
+    }
+
+    .search-result-list-error-wrapper {
+      text-align: center;
+      flex: 1;
+      margin-left: 1rem;
+      @include flexColumnCenter;
     }
   }
 }
