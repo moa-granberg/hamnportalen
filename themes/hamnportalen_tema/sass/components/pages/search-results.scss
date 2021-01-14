@@ -2,12 +2,23 @@
   display: flex;
 }
 
-.hide-search-button {
+.hide-search-result-mobile {
   display: none;
 }
 
-.show-search-button {
+.show-search-result-mobile {
+
+}
+
+form.show-search-result-mobile, form.hide-search-result-mobile {
   @media screen and (min-width: $desktop_bp) {
     display: none;
   }
 }
+
+div.show-search-result-mobile, div.hide-search-result-mobile {
+  @media screen and (min-width: $desktop_bp) {
+    display: block;
+  }
+}
+

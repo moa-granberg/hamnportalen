@@ -1,20 +1,24 @@
 <?php
-$listClass = "show-search-button";
-$mapClass = "hide-search-button";
+$listClass = "show-search-result-mobile";
+$mapClass = "hide-search-result-mobile";
 
 if (isset($_POST["map"])) {
-  $mapClass = "show-search-button";
-  $listClass = "hide-search-button";
+  $mapClass = "show-search-result-mobile";
+  $listClass = "hide-search-result-mobile";
 }
 if (isset($_POST["list"])) {
-  $listClass = "show-search-button";
-  $mapClass = "hide-search-button";
+  $listClass = "show-search-result-mobile";
+  $mapClass = "hide-search-result-mobile";
 }
 
 ?>
 <section class="search-results-main-wrapper">
-  <?php require_once(__DIR__ . '/map.php'); ?>
-  <?php require_once(__DIR__ . '/list.php'); ?>
+  <div class="<?php echo $mapClass ?>">
+    <?php require_once(__DIR__ . '/map.php'); ?>
+  </div>
+  <div class="<?php echo $listClass ?>">
+    <?php require_once(__DIR__ . '/list.php'); ?>
+  </div>
 </section>
 
 <form class="<?php echo $listClass ?>" action="" method="POST">
