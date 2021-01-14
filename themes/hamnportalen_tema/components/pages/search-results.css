@@ -2,4 +2,8 @@
 	display: flex;
 }
 
+.hide-search-button {
+	display: none;
+}
+
 /*# sourceMappingURL=search-results.css.map */

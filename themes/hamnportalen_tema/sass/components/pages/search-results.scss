@@ -1,3 +1,13 @@
 .search-results-main-wrapper {
   display: flex;
 }
+
+.hide-search-button {
+  display: none;
+}
+
+.show-search-button {
+  @media screen and (min-width: $desktop_bp) {
+    display: none;
+  }
+}

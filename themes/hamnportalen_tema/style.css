@@ -935,6 +935,16 @@ textarea {
 	display: flex;
 }
 
+.hide-search-button {
+	display: none;
+}
+
+@media screen and (min-width: 782px) {
+	.show-search-button {
+		display: none;
+	}
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
