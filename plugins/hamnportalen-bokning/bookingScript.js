@@ -15,7 +15,7 @@ const createElement1 = (el, className) => {
   return newEl;
 };
 
-const renderCalender = () => {
+const renderCalendar = () => {
   const calendar = document.querySelector('.booking_calendar_main_container');
 
   if (calendar) {
@@ -35,5 +35,28 @@ const renderCalender = () => {
       calendar.classList.toggle('hide');
     });
   }
+
+  document.querySelector('#wpdevart-submit1').addEventListener('click', () => submitForm());
 };
-renderCalender();
+
+const validEmail = email => {
+  const regex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+  return email.match(regex);
+};
+
+const submitForm = () => {
+  const checkIn = document.querySelector('#wpdevart_form_checkin1').value;
+  const checkOut = document.querySelector('#wpdevart_form_checkout1').value;
+  const boatSize = document.querySelector('#wpdevart_extra_field3').value;
+  const name = document.querySelector('#wpdevart_form_field1').value;
+  const surname = document.querySelector('#wpdevart_form_field2').value;
+  const email = document.querySelector('#wpdevart_form_field3').value;
+  const phone = document.querySelector('#wpdevart_form_field4').value;
+
+  if (checkIn && checkOut && boatSize && name && surname && phone && validEmail(email)) {
+    window.location.href = `${window.location.href.split('blog')[0]}bokningsbekraftelse`;
+  }
+};
+
+editFormText();
+renderCalendar();
