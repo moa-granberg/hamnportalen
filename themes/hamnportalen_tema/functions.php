@@ -148,10 +148,27 @@ function add_hamnportalen_theme_styles() {
 }
 add_action("wp_enqueue_scripts", "add_hamnportalen_theme_styles");
 
-function add_hamnportalen_map_search_api_script() {
-	wp_enqueue_script('mapScript', get_template_directory_uri() . "/template-parts/pages/search-results/scripts/mapScript.js");
-}
-add_action("wp_enqueue_scripts", "add_hamnportalen_map_search_api_script");
+// function add_hamnportalen_map_search_api_script() {
+// 	wp_enqueue_script('mapScript', get_template_directory_uri() . "/template-parts/pages/search-results/scripts/mapScript.js#wpcasync");
+// }
+// add_action("wp_enqueue_scripts", "add_hamnportalen_map_search_api_script");
+
+// This function is to load the google api script file asynchronius
+
+// function add_async_forscript($url) {
+// 	if (strpos($url, '#wpcasync')===false)
+// 			return $url;
+// 	else if (is_admin())
+// 			return str_replace('#wpcasync', '', $url);
+// 	else
+// 			return str_replace('#wpcasync', '', $url)."' async='async"; 
+// }
+// add_filter('clean_url', 'add_async_forscript', 11, 1);
+
+// function add_google_api_script() {
+// 	wp_enqueue_script('google-maps-api', "https://maps.googleapis.com/maps/api/js?key=AIzaSyAhZ_WbKFU-E6YCJuoB3dD0BWVTYuO8Km8&callback=initMap#wpcasync");
+// }
+// add_action('wp_enqueue_scripts', "add_google_api_script");
 
 // ENDPOINTS
 
