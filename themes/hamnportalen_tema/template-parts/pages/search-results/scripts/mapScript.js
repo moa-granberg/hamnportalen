@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
 
+  // test comment
 
   console.log('skriptet körs!!!');
   function extractSearchParam() {
