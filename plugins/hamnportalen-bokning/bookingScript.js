@@ -11,7 +11,7 @@ const createElement1 = (el, className) => {
   return newEl;
 };
 
-const renderCalender = () => {
+const renderCalendar = () => {
   const calendar = document.querySelector('.booking_calendar_main_container');
   const entryContent = document.querySelector('.entry-content');
   calendar.remove();
@@ -52,4 +52,4 @@ const submitForm = () => {
 };
 
 editFormText();
-renderCalender();
+renderCalendar();
