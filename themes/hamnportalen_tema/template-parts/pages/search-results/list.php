@@ -31,6 +31,14 @@ if ($_GET['search_params']) {
       usort($results, 'cmp');
     }
 
+    //sorts by rating
+    if (isset($_POST['rating'])) {
+      function cmp($a, $b) {
+        return strcmp(get_field('rating', $b->ID), get_field('rating', $a->ID),);
+      }
+      usort($results, 'cmp');
+    }
+
     $ports_html = '';
 
     foreach($results as $port) {
@@ -103,6 +111,7 @@ echo "
       <p>Sortera efter:</p>
       <input type='submit' value='A-Ö' name='alpha' />
       <input type='submit' value='Pris' name='price' />
+      <input type='submit' value='Betyg' name='rating' />
     </form>
 
     $ports_html
