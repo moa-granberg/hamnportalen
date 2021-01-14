@@ -12,6 +12,7 @@ if (isset($_POST["list"])) {
 }
 
 ?>
+
 <section class="search-results-main-wrapper">
   <div class="<?php echo $mapClass ?>">
     <?php require_once(__DIR__ . '/map.php'); ?>
