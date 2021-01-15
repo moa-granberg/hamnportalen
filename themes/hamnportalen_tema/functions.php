@@ -184,15 +184,16 @@ function get_ports($search_term) {
 		AND post_status = 'publish'");
 	
 	$ports_info_arr = array();
+	
 	foreach($posts as $post) {
-		// make a new query for each unique postID
-		$postID = $post->ID;
-		$table = $wpdb->prefix . "postmeta";
-		$port_fields = $wpdb->get_results(
-			"SELECT * FROM $table
-			WHERE post_id = $postID");
+		$portObj = new stdClass;
+		$portObj->img_url = get_field('hero_img_1', $post->ID);
+		$portObj->name = get_field('name', $post->ID);
+		$portObj->long = get_field('long', $post->ID);
+		$portObj->lat = get_field('lat', $post->ID);
+		$portObj->price = get_field('price', $post->ID);
 		
-		array_push($ports_info_arr, $port_fields);
+		array_push($ports_info_arr, $portObj );
 	}
 	return $ports_info_arr;
 }
