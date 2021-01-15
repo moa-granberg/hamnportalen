@@ -1,0 +1,66 @@
+.port-main-wrapper {
+  width: 100vw;
+
+  @media screen and (min-width: $desktop-bp) {
+    display: grid;
+    grid: auto / 1fr 3fr 2fr 1fr;
+    grid-template-areas:
+      'hero hero hero hero'
+      '. info booking .'
+      '. facilities booking .'
+      '. contact booking .'
+      '. road-description booking .'
+      'map map map map'
+      '. events . .'
+      '. personnel . .'
+      '. reviews . .';
+  }
+
+  .port-article {
+    margin: 1.5rem 3rem 1.5rem 0;
+
+    &__header {
+      text-transform: uppercase;
+    }
+
+    &.port-hero {
+      grid-area: hero;
+    }
+
+    &.port-info {
+      grid-area: info;
+    }
+
+    &.port-facilities {
+      grid-area: facilities;
+    }
+
+    &.port-contact {
+      grid-area: contact;
+    }
+
+    &.port-road-description {
+      grid-area: road-description;
+    }
+
+    &.port-map {
+      grid-area: map;
+    }
+
+    &.port-events {
+      grid-area: events;
+    }
+
+    &.port-personnel {
+      grid-area: personnel;
+    }
+
+    &.port-reviews {
+      grid-area: reviews;
+    }
+  }
+
+  .port-booking {
+    grid-area: booking;
+  }
+}

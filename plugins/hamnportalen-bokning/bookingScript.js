@@ -19,9 +19,10 @@ const renderCalendar = () => {
   const calendar = document.querySelector('.booking_calendar_main_container');
 
   if (calendar) {
-    const entryContent = document.querySelector('.entry-content');
+    const entryContent = document.querySelector('.port-main-wrapper');
     calendar.remove();
     const wrapper = createElement1('div', 'calendar-wrapper');
+    wrapper.classList.add('port-booking');
     const wrapperhead = createElement1('div', 'calendar-wrapper__header');
     const h2 = createElement1('h2', 'calendar-wrapper__h2');
     h2.innerText = 'DIREKTBOKNING';

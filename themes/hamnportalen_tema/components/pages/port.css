@@ -1,0 +1,44 @@
+.port-main-wrapper {
+	width: 100vw;
+	display: grid;
+	grid: auto / 10% 50% 1fr 10%;
+	grid-template-areas: '. hero hero .' '. info booking .' '. facilities booking .' '. contact booking .' '. road-description road-description .' '. events . .' '. personnel . .' '. reviews . .';
+}
+
+.port-main-wrapper .port-hero {
+	grid-area: hero;
+}
+
+.port-main-wrapper .port-info {
+	grid-area: info;
+}
+
+.port-main-wrapper .port-facilities {
+	grid-area: facilities;
+}
+
+.port-main-wrapper .port-contact {
+	grid-area: contact;
+}
+
+.port-main-wrapper .port-road-description {
+	grid-area: road-description;
+}
+
+.port-main-wrapper .port-events {
+	grid-area: events;
+}
+
+.port-main-wrapper .port-personnel {
+	grid-area: personnel;
+}
+
+.port-main-wrapper .port-reviews {
+	grid-area: reviews;
+}
+
+.port-main-wrapper .port-booking {
+	grid-area: booking;
+}
+
+/*# sourceMappingURL=port.css.map */
