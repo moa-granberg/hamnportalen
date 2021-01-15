@@ -22,12 +22,20 @@ const getPorts = async () => {
   return result;
 }
 
-const getLong = (port) => {
-  return Number(port.find(obj => obj.meta_key === 'long').meta_value);
+const getPortField = (port, key) => {
+  let result = port.find(obj => obj.meta_key === key).meta_value;
+  if (key === 'lat' || key === 'long') {
+    return Number(result);
+  } else {
+    return result;
+  }
 }
 
-const getLat = (port) => {
-  return Number(port.find(obj => obj.meta_key === 'lat').meta_value);
+const generateInfoWindow = (port) => {
+  if (viewWidth > 500)
+  return (
+    `<div>${port.price}</div>`
+  )
 }
 
 const mapContainer = document.querySelector('.map')
@@ -36,20 +44,20 @@ const results = document.querySelector('.results')
 // Initialize and add the map
 async function initMap() {
   let ports = await getPorts();
-  console.log(typeof getLat(ports[0]));
-  const center = { lat: getLat(ports[0]), lng: getLong(ports[0]) };
+  const center = { lat: getPortField(ports[0], 'lat'), lng: getPortField(ports[0], 'long') };
 
   const map = new google.maps.Map(mapContainer, {
     zoom: 14,
     center: center,
   });
-
+  console.log(ports);
   const features = ports.map(port => {
-    
     return {
-      position: new google.maps.LatLng(getLat(port), getLong(port)),
+      position: new google.maps.LatLng(getPortField(port, 'lat'), getPortField(port, 'long')),
       map: map,
-      title: port.name
+      title: getPortField(port, 'name'),
+      price: getPortField(port, 'price'),
+      description: getPortField(port, 'description'),
     }
   })
   // The marker
@@ -59,7 +67,7 @@ async function initMap() {
       map: map,
     })
     const infowindow = new google.maps.InfoWindow({
-      content: mark.title,
+      content: generateInfoWindow(mark), 
     });
     marker.addListener("click", () => {
       infowindow.open(marker.get("map"), marker)
@@ -67,5 +75,12 @@ async function initMap() {
   });
 }
 
+// var markers = [];//some array
+// var bounds = new google.maps.LatLngBounds();
+// for (var i = 0; i < markers.length; i++) {
+//  bounds.extend(markers[i]);
+// }
+
+// map.fitBounds(bounds);
 
 </script>
