@@ -24,6 +24,7 @@
 		"sass/base/elements/_buttons.scss",
 		"sass/base/elements/_fields.scss",
 		"sass/layouts/_footer.scss",
+		"sass/layouts/_header.scss",
 		"sass/components/_components.scss",
 		"sass/components/navigation/_navigation.scss",
 		"sass/components/content/_posts-and-pages.scss",

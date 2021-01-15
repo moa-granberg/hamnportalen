@@ -1,0 +1,140 @@
+header.site-header {
+  background-image: url('./assets/images/mobile-header-dropdown-image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  h1.site-title {
+    margin: 2rem 0 2rem 0;
+  }
+  #site-navigation {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    button:hover,
+    a:hover {
+      border-color: #84c915 !important;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    button.menu-toggle {
+      height: 2rem;
+      width: 2rem;
+      background-size: contain;
+      opacity: 1;
+      border: none;
+    }
+    button.hamburger-menu {
+      background-image: url('./assets/images/hamburger-menu.png');
+      background-color: transparent;
+    }
+    button.cancel-cross {
+      background-image: url('./assets/images/cancel-cross.png');
+      background-color: transparent;
+    }
+  }
+}
+
+header.landingPageHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start !important;
+  height: 100vh;
+  background-image: url('./assets/images/desktop-landingpage-image.png');
+  background-size: fill;
+  text-align: center;
+}
+
+header.dropdown {
+  height: 60vh;
+}
+
+div#primary-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  li,
+  button {
+    margin-top: 2rem;
+  }
+  button {
+    border: none;
+    padding: 0;
+  }
+}
+
+h1.site-title a {
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: $blue !important;
+}
+
+.landingPageH1 {
+  color: $blue;
+  margin-top: 2rem;
+  display: block;
+  overflow: hidden;
+}
+
+.menu {
+  display: none;
+}
+
+.show-links {
+  display: block;
+}
+
+button.landingPageMobileButton {
+  padding: 0.8rem 1.5rem !important;
+  border: 1px solid #e227d0 !important;
+}
+
+@media only screen and (min-width: $desktop_bp) {
+  header.site-header header#site-navigation {
+    background-image: url('./assets/images/desktop-header-image.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 0rem;
+    display: flex;
+    align-items: center;
+  }
+  .main-navigation a,
+  .main-navigation button.secondary_btn {
+    display: block !important;
+    margin-right: 1.8rem;
+  }
+  .menu {
+    display: block;
+  }
+  h1.site-title a {
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
+
+  div#primary-menu ul {
+    flex-direction: row;
+    align-items: center;
+    li,
+    button {
+      margin-top: 0;
+    }
+  }
+  menu {
+    display: block;
+  }
+  button.secondary_btn {
+    padding: 0.8rem 1.5rem !important;
+    border: 1px solid #e227d0 !important;
+  }
+  .landingPageH1 {
+    font-size: 4rem;
+  }
+}

@@ -75,7 +75,7 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: $desktop_bp) {
 
 	.menu-toggle {
 		display: none;

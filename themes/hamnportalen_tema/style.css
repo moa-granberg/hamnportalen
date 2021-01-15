@@ -544,6 +544,10 @@ table {
 --------------------------------------------- */
 a {
 	color: #4169e1;
+	text-transform: uppercase;
+	font-family: "Dosis", sans-serif;
+	color: #202020 !important;
+	font-size: 1rem;
 }
 
 a:visited {
@@ -573,7 +577,7 @@ a:hover, a:active {
 	padding: 0.8rem 1.5rem;
 	display: block;
 	text-transform: uppercase;
-	font-family: "Dosis", sans-serif;
+	font-family: 'Dosis', sans-serif;
 	font-weight: 600;
 	border: none;
 	font-size: 1.2rem;
@@ -581,6 +585,7 @@ a:hover, a:active {
 
 .primary_btn:hover {
 	background-color: #0012b0;
+	cursor: pointer;
 }
 
 .secondary_btn {
@@ -591,7 +596,7 @@ a:hover, a:active {
 	padding: 0.8rem 1.5rem;
 	display: block;
 	text-transform: uppercase;
-	font-family: "Dosis", sans-serif;
+	font-family: 'Dosis', sans-serif;
 	font-weight: 600;
 	border: 1px solid #e227d0;
 	font-size: 1.2rem;
@@ -599,6 +604,7 @@ a:hover, a:active {
 
 .secondary_btn:hover {
 	border-color: #84c915;
+	cursor: pointer;
 }
 
 input[type="text"],
@@ -702,6 +708,157 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+header.site-header {
+	background-image: url("./assets/images/mobile-header-dropdown-image.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 20vh;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+header.site-header h1.site-title {
+	margin: 2rem 0 2rem 0;
+}
+
+header.site-header #site-navigation {
+	margin-top: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+header.site-header #site-navigation button:hover,
+header.site-header #site-navigation a:hover {
+	border-color: #84c915 !important;
+}
+
+header.site-header #site-navigation a:hover {
+	text-decoration: underline;
+}
+
+header.site-header #site-navigation button.menu-toggle {
+	height: 2rem;
+	width: 2rem;
+	background-size: contain;
+	opacity: 1;
+	border: none;
+}
+
+header.site-header #site-navigation button.hamburger-menu {
+	background-image: url("./assets/images/hamburger-menu.png");
+	background-color: transparent;
+}
+
+header.site-header #site-navigation button.cancel-cross {
+	background-image: url("./assets/images/cancel-cross.png");
+	background-color: transparent;
+}
+
+header.landingPageHeader {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start !important;
+	height: 100vh;
+	background-image: url("./assets/images/desktop-landingpage-image.png");
+	background-size: fill;
+	text-align: center;
+}
+
+header.dropdown {
+	height: 60vh;
+}
+
+div#primary-menu ul {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+div#primary-menu ul li,
+div#primary-menu ul button {
+	margin-top: 2rem;
+}
+
+div#primary-menu ul button {
+	border: none;
+	padding: 0;
+}
+
+h1.site-title a {
+	text-decoration: none;
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: #001aff !important;
+}
+
+.landingPageH1 {
+	color: #001aff;
+	margin-top: 2rem;
+	display: block;
+	overflow: hidden;
+}
+
+.menu {
+	display: none;
+}
+
+.show-links {
+	display: block;
+}
+
+button.landingPageMobileButton {
+	padding: 0.8rem 1.5rem !important;
+	border: 1px solid #e227d0 !important;
+}
+
+@media only screen and (min-width: 782px) {
+	header.site-header header#site-navigation {
+		background-image: url("./assets/images/desktop-header-image.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin-top: 0rem;
+		display: flex;
+		align-items: center;
+	}
+	.main-navigation a,
+	.main-navigation button.secondary_btn {
+		display: block !important;
+		margin-right: 1.8rem;
+	}
+	.menu {
+		display: block;
+	}
+	h1.site-title a {
+		font-size: 3rem;
+		margin-left: 2rem;
+	}
+	div#primary-menu ul {
+		flex-direction: row;
+		align-items: center;
+	}
+	div#primary-menu ul li,
+	div#primary-menu ul button {
+		margin-top: 0;
+	}
+	menu {
+		display: block;
+	}
+	button.secondary_btn {
+		padding: 0.8rem 1.5rem !important;
+		border: 1px solid #e227d0 !important;
+	}
+	.landingPageH1 {
+		font-size: 4rem;
+	}
+}
+
+/*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 /* Navigation
@@ -762,7 +919,7 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 782px) {
 	.menu-toggle {
 		display: none;
 	}
@@ -802,8 +959,7 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
+.post {
 	margin: 0 0 1.5em;
 }
 
