@@ -18,23 +18,18 @@ const getPorts = async () => {
   const param = extractSearchParam();
   const url = `http://localhost/hamnportalen_new/wp-json/mapsearch/search/${param}`
   const result = await fetch(url).then(response => response.json());
-
   return result;
 }
 
-const getPortField = (port, key) => {
-  let result = port.find(obj => obj.meta_key === key).meta_value;
-  if (key === 'lat' || key === 'long') {
-    return Number(result);
-  } else {
-    return result;
-  }
-}
-
 const generateInfoWindow = (port) => {
-  if (viewWidth > 500)
   return (
-    `<div>${port.price}</div>`
+    `<div>
+      <div class="img_wrapper">
+        <img src=${port.img}>
+      </div>
+      <h2>${port.title}</h2>
+      <p>${port.price} kr per dygn</p>
+    </div>`
   )
 }
 
@@ -44,20 +39,20 @@ const results = document.querySelector('.results')
 // Initialize and add the map
 async function initMap() {
   let ports = await getPorts();
-  const center = { lat: getPortField(ports[0], 'lat'), lng: getPortField(ports[0], 'long') };
+  const center = { lat: ports[0].lat, lng: ports[0].long };
 
   const map = new google.maps.Map(mapContainer, {
     zoom: 14,
     center: center,
   });
-  console.log(ports);
+
   const features = ports.map(port => {
     return {
-      position: new google.maps.LatLng(getPortField(port, 'lat'), getPortField(port, 'long')),
+      position: new google.maps.LatLng(port.lat, port.long),
       map: map,
-      title: getPortField(port, 'name'),
-      price: getPortField(port, 'price'),
-      description: getPortField(port, 'description'),
+      title: port.name,
+      price: port.price,
+      img: port.img_url
     }
   })
   // The marker
