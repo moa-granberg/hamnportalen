@@ -1,9 +1,7 @@
 <?php
 ?>
-<main class="wrapper" style="width: 500px height: 500px" >
-<div class="map" style="width: 50vw; height: 400px; border: 1px solid red;">Map goes here</div>
-<div class="results"></div>
-</main>
+<div class="search-result-map-wrapper"></div>
+
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhZ_WbKFU-E6YCJuoB3dD0BWVTYuO8Km8&callback=initMap" type="text/javascript"></script>
 <script async type="text/javascript">
@@ -23,18 +21,17 @@ const getPorts = async () => {
 
 const generateInfoWindow = (port) => {
   return (
-    `<div>
-      <div class="img_wrapper">
+    `<div class="map-info map-info__card-wrapper">
+      <div class="map-info__img-wrapper">
         <img src=${port.img}>
       </div>
-      <h2>${port.title}</h2>
-      <p>${port.price} kr per dygn</p>
+      <h3>${port.title}</h3>
+      <h4>${port.price} kr per dygn</h4>
     </div>`
   )
 }
 
-const mapContainer = document.querySelector('.map')
-const results = document.querySelector('.results')
+const mapContainer = document.querySelector('.search-result-map-wrapper')
 
 // Initialize and add the map
 async function initMap() {

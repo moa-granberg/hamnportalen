@@ -1,3 +1,23 @@
 .search-results-main-wrapper {
   display: flex;
+  width: 100vw;
+  height: 80vh;
+}
+
+// MAP CSS
+.search-result-map-wrapper {
+  width: inherit;
+}
+.map-info {
+  display: block;
+
+  &__img-wrapper {
+    // height: 100%;
+    width: 100%;
+    max-width: 350px;
+
+    img {
+      width: 100%;
+    }
+  }
 }
