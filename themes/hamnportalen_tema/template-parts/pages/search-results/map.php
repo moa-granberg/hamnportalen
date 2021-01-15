@@ -1,7 +1,7 @@
 <?php
 ?>
-<main class="wrapper">
-<div class="map" style="width: 100%; height: 400px; border: 1px solid red;">Map goes here</div>
+<main class="wrapper" style="width: 500px height: 500px" >
+<div class="map" style="width: 50vw; height: 400px; border: 1px solid red;">Map goes here</div>
 <div class="results"></div>
 </main>
 
@@ -11,55 +11,43 @@
 function extractSearchParam() {
   const url = window.location.href;
   const regex = /params=(.*)/
-  return url.match(regex)[1].split('').slice(0, this.length -1 ).join('')
+  return url.match(regex)[1].split('').slice(0, this.length -1 ).join('');
 }
 
-const list = async () => {
-  const param = extractSearchParam()
+const getPorts = async () => {
+  const param = extractSearchParam();
   const url = `http://localhost/hamnportalen_new/wp-json/mapsearch/search/${param}`
-  const result = await fetch(url).then(response => response.json())
-  console.log('result: ', result);
-  return result
+  const result = await fetch(url).then(response => response.json());
+
+  return result;
 }
 
-list()
+const getLong = (port) => {
+  return Number(port.find(obj => obj.meta_key === 'long').meta_value);
+}
 
-// const api = 'AIzaSyAhZ_WbKFU-E6YCJuoB3dD0BWVTYuO8Km8'
+const getLat = (port) => {
+  return Number(port.find(obj => obj.meta_key === 'lat').meta_value);
+}
+
 const mapContainer = document.querySelector('.map')
 const results = document.querySelector('.results')
 
-let map;
-const ports = [
-  {
-    lat: 59.822594,
-    long: 18.994963,
-    name: 'Vätö'
-  },
-  {
-    lat: 59.753282,
-    long: 18.720171,
-    name: 'Norrtälje hamn'
-  },
-  {
-    lat: 60.399610,
-    long: 18.478808,
-    name: 'Gräsö hamn'
-  }
-]
-
 // Initialize and add the map
-function initMap() {
-
-  const center = { lat: ports[0].lat, lng: ports[0].long };
+async function initMap() {
+  let ports = await getPorts();
+  console.log(typeof getLat(ports[0]));
+  const center = { lat: getLat(ports[0]), lng: getLong(ports[0]) };
 
   const map = new google.maps.Map(mapContainer, {
-    zoom: 8,
+    zoom: 14,
     center: center,
   });
 
   const features = ports.map(port => {
+    
     return {
-      position: new google.maps.LatLng(port.lat, port.long),
+      position: new google.maps.LatLng(getLat(port), getLong(port)),
       map: map,
       title: port.name
     }
