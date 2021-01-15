@@ -189,8 +189,8 @@ function get_ports($search_term) {
 		$portObj = new stdClass;
 		$portObj->img_url = get_field('hero_img_1', $post->ID);
 		$portObj->name = get_field('name', $post->ID);
-		$portObj->long = get_field('long', $post->ID);
-		$portObj->lat = get_field('lat', $post->ID);
+		$portObj->long = (float)get_field('long', $post->ID);
+		$portObj->lat = (float)get_field('lat', $post->ID);
 		$portObj->price = get_field('price', $post->ID);
 		
 		array_push($ports_info_arr, $portObj );
