@@ -10,14 +10,28 @@
 }
 .map-info {
   display: block;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 0.3rem;
+  margin-top: 0.3rem;
 
   &__img-wrapper {
-    // height: 100%;
     width: 100%;
     max-width: 350px;
 
     img {
       width: 100%;
     }
+  }
+
+  &__title {
+    margin-top: 1rem;
+    font-weight: 400;
+  }
+
+  &__price {
+    color: $red;
+    font-family: 'Dosis';
+    margin-top: 0;
   }
 }

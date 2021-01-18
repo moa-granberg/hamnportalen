@@ -943,6 +943,10 @@ textarea {
 
 .map-info {
 	display: block;
+	text-transform: uppercase;
+	text-align: center;
+	margin-left: 0.3rem;
+	margin-top: 0.3rem;
 }
 
 .map-info__img-wrapper {
@@ -952,6 +956,17 @@ textarea {
 
 .map-info__img-wrapper img {
 	width: 100%;
+}
+
+.map-info__title {
+	margin-top: 1rem;
+	font-weight: 400;
+}
+
+.map-info__price {
+	color: #e00000;
+	font-family: 'Dosis';
+	margin-top: 0;
 }
 
 /*--------------------------------------------------------------

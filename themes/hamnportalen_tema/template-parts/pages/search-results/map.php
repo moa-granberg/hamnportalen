@@ -25,8 +25,8 @@ const generateInfoWindow = (port) => {
       <div class="map-info__img-wrapper">
         <img src=${port.img}>
       </div>
-      <h3>${port.title}</h3>
-      <h4>${port.price} kr per dygn</h4>
+      <h3 class="map-info__title">${port.title}</h3>
+      <h4 class="map-info__price">${port.price} kr/dygn</h4>
     </div>`
   )
 }
