@@ -21,13 +21,13 @@ const getPorts = async () => {
 
 const generateInfoWindow = (port) => {
   return (
-    `<div class="map-info map-info__card-wrapper">
+    `<a class="map-info map-info__card-wrapper" href="${port.url}">
       <div class="map-info__img-wrapper">
         <img src=${port.img}>
       </div>
       <h3 class="map-info__title">${port.title}</h3>
       <h4 class="map-info__price">${port.price} kr/dygn</h4>
-    </div>`
+    </a>`
   )
 }
 
@@ -71,7 +71,8 @@ async function initMap() {
       map: map,
       title: port.name,
       price: port.price,
-      img: port.img_url
+      img: port.img_url,
+      url: port.url,
     }
   })
   // The marker

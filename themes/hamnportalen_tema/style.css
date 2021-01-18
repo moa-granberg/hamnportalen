@@ -947,6 +947,7 @@ textarea {
 	text-align: center;
 	margin-left: 0.3rem;
 	margin-top: 0.3rem;
+	text-decoration: none;
 }
 
 .map-info__img-wrapper {

@@ -192,6 +192,7 @@ function get_ports($search_term) {
 		$portObj->long = (float)get_field('long', $post->ID);
 		$portObj->lat = (float)get_field('lat', $post->ID);
 		$portObj->price = get_field('price', $post->ID);
+		$portObj->url = get_permalink($post->ID);
 		
 		array_push($ports_info_arr, $portObj );
 	}
