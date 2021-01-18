@@ -79,6 +79,7 @@ async function initMap() {
   features.forEach(mark => {
     const marker = new google.maps.Marker({
       position: mark.position,
+      icon: 'https://maps.google.com/mapfiles/ms/micons/marina.png',
       map: map,
     })
     const infowindow = new google.maps.InfoWindow({
