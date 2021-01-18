@@ -173,7 +173,7 @@ add_action("wp_enqueue_scripts", "add_hamnportalen_theme_styles");
 // ENDPOINTS
 
 function get_ports($search_term) {
-	$search_query = $search_term['search_term'];
+	$search_query = urldecode($search_term['search_term']);
 	
 	global $wpdb;
 	$table_name = $wpdb->prefix . "posts";
