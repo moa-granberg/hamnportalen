@@ -1084,7 +1084,43 @@ form.show-search-result-mobile > input {
 	div.show-search-result-mobile,
 	div.hide-search-result-mobile {
 		display: block;
+		display: flex;
+		width: 100vw;
+		height: 80vh;
 	}
+}
+
+.search-result-map-wrapper {
+	width: inherit;
+}
+
+.map-info {
+	display: block;
+	text-transform: uppercase;
+	text-align: center;
+	margin-left: 0.3rem;
+	margin-top: 0.3rem;
+	text-decoration: none;
+}
+
+.map-info__img-wrapper {
+	width: 100%;
+	max-width: 350px;
+}
+
+.map-info__img-wrapper img {
+	width: 100%;
+}
+
+.map-info__title {
+	margin-top: 1rem;
+	font-weight: 400;
+}
+
+.map-info__price {
+	color: #e00000;
+	font-family: 'Dosis';
+	margin-top: 0;
 }
 
 /*--------------------------------------------------------------

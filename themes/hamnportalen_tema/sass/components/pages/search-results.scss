@@ -18,7 +18,7 @@
       display: flex;
       margin-left: 1rem;
       text-transform: uppercase;
-      
+
       input[type='submit'] {
         border: none;
         background-color: transparent;
@@ -134,5 +134,42 @@ div.show-search-result-mobile,
 div.hide-search-result-mobile {
   @media screen and (min-width: $desktop_bp) {
     display: block;
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+  }
+}
+
+// MAP CSS
+.search-result-map-wrapper {
+  width: inherit;
+}
+
+.map-info {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 0.3rem;
+  margin-top: 0.3rem;
+  text-decoration: none;
+
+  &__img-wrapper {
+    width: 100%;
+    max-width: 350px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-top: 1rem;
+    font-weight: 400;
+  }
+
+  &__price {
+    color: $red;
+    font-family: 'Dosis';
+    margin-top: 0;
   }
 }

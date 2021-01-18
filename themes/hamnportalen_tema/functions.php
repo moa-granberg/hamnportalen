@@ -148,7 +148,63 @@ function add_hamnportalen_theme_styles() {
 }
 add_action("wp_enqueue_scripts", "add_hamnportalen_theme_styles");
 
+// function add_hamnportalen_map_search_api_script() {
+// 	wp_enqueue_script('mapScript', get_template_directory_uri() . "/template-parts/pages/search-results/scripts/mapScript.js#wpcasync");
+// }
+// add_action("wp_enqueue_scripts", "add_hamnportalen_map_search_api_script");
 
+// This function is to load the google api script file asynchronius
+
+// function add_async_forscript($url) {
+// 	if (strpos($url, '#wpcasync')===false)
+// 			return $url;
+// 	else if (is_admin())
+// 			return str_replace('#wpcasync', '', $url);
+// 	else
+// 			return str_replace('#wpcasync', '', $url)."' async='async"; 
+// }
+// add_filter('clean_url', 'add_async_forscript', 11, 1);
+
+// function add_google_api_script() {
+// 	wp_enqueue_script('google-maps-api', "https://maps.googleapis.com/maps/api/js?key=AIzaSyAhZ_WbKFU-E6YCJuoB3dD0BWVTYuO8Km8&callback=initMap#wpcasync");
+// }
+// add_action('wp_enqueue_scripts', "add_google_api_script");
+
+// ENDPOINTS
+
+function get_ports($search_term) {
+	$search_query = $search_term['search_term'];
+	
+	global $wpdb;
+	$table_name = $wpdb->prefix . "posts";
+
+	$posts = $wpdb->get_results(
+		"SELECT * FROM $table_name 
+		WHERE post_title LIKE '$search_query%'
+		AND post_status = 'publish'");
+	
+	$ports_info_arr = array();
+	
+	foreach($posts as $post) {
+		$portObj = new stdClass;
+		$portObj->img_url = get_field('hero_img_1', $post->ID);
+		$portObj->name = get_field('name', $post->ID);
+		$portObj->long = (float)get_field('long', $post->ID);
+		$portObj->lat = (float)get_field('lat', $post->ID);
+		$portObj->price = get_field('price', $post->ID);
+		$portObj->url = get_permalink($post->ID);
+		
+		array_push($ports_info_arr, $portObj );
+	}
+	return $ports_info_arr;
+}
+
+add_action( 'rest_api_init', function() {
+  register_rest_route( 'mapsearch', '/search/(?P<search_term>\S+)', array(
+    'methods' => 'GET',
+    'callback' => 'get_ports'
+  ) );
+} );
 
 /**
  * Enqueue scripts and styles.
