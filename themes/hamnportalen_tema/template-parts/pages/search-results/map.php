@@ -59,8 +59,9 @@ async function initMap() {
     lng: ports.map(port => port.long),
   });
 
+  const bounds = new google.maps.LatLngBounds();
+
   const map = new google.maps.Map(mapContainer, {
-    zoom: 14,
     center,
   });
 
@@ -85,15 +86,14 @@ async function initMap() {
     marker.addListener("click", () => {
       infowindow.open(marker.get("map"), marker)
     });
+    bounds.extend(marker.position);
   });
+
+  if (ports.length === 1) {
+    map.setZoom(14);
+  } else {
+    map.fitBounds(bounds);
+  }
 }
-
-// var markers = [];//some array
-// var bounds = new google.maps.LatLngBounds();
-// for (var i = 0; i < markers.length; i++) {
-//  bounds.extend(markers[i]);
-// }
-
-// map.fitBounds(bounds);
 
 </script>
