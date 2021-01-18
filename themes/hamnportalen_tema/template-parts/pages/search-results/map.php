@@ -14,7 +14,7 @@ function extractSearchParam() {
 
 const getPorts = async () => {
   const param = extractSearchParam();
-  const url = `http://localhost/hamnportalen_new/wp-json/mapsearch/search/${param}`
+  const url = `${window.location.href.split('/search-results/')[0]}/wp-json/mapsearch/search/${param}/`;
   const result = await fetch(url).then(response => response.json());
   return result;
 }
