@@ -933,6 +933,25 @@ textarea {
 --------------------------------------------- */
 .search-results-main-wrapper {
 	display: flex;
+	width: 100vw;
+	height: 80vh;
+}
+
+.search-result-map-wrapper {
+	width: inherit;
+}
+
+.map-info {
+	display: block;
+}
+
+.map-info__img-wrapper {
+	width: 100%;
+	max-width: 350px;
+}
+
+.map-info__img-wrapper img {
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
