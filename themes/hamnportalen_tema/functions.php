@@ -181,8 +181,10 @@ function get_ports($search_term) {
 	$posts = $wpdb->get_results(
 		"SELECT * FROM $table_name 
 		WHERE post_title LIKE '$search_query%'
-		AND post_status = 'publish'");
-	
+		AND post_status = 'publish'
+		AND post_type = 'post'
+		");
+
 	$ports_info_arr = array();
 	
 	foreach($posts as $post) {
