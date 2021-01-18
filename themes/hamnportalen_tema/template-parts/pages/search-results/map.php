@@ -55,10 +55,17 @@ const mapContainer = document.querySelector('.search-result-map-wrapper')
 async function initMap() {
   let ports = await getPorts();
 
-  const center = getCenter( {
-    lat: ports.map(port => port.lat),
-    lng: ports.map(port => port.long),
-  });
+  let center;
+  if (ports.length) {
+    //if ports are found, calculate center based on all ports' lat & lng
+    center = getCenter( {
+      lat: ports.map(port => port.lat),
+      lng: ports.map(port => port.long),
+    });
+  } else {
+    //if no ports are found, set center to middle of Sweden
+    center = { lat: 62.39, lng: 17.3 };
+  }
 
   const bounds = new google.maps.LatLngBounds();
 
@@ -92,7 +99,9 @@ async function initMap() {
     bounds.extend(marker.position);
   });
 
-  if (ports.length === 1) {
+  if (ports.length === 0) {
+    map.setZoom(4.7); //magic number where whole of Sweden is visible 
+  } else if (ports.length === 1) {
     map.setZoom(14);
   } else {
     map.fitBounds(bounds);
