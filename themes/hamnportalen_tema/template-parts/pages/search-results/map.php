@@ -1,9 +1,10 @@
 <?php
+require_once(__DIR__ . "/.env.php");
 ?>
+
 <div class="search-result-map-wrapper"></div>
 
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhZ_WbKFU-E6YCJuoB3dD0BWVTYuO8Km8&callback=initMap" type="text/javascript"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo $apiKey ?>&callback=initMap" type="text/javascript"></script>
 <script async type="text/javascript">
 
 function extractSearchParam() {
