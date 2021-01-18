@@ -25,6 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'hamnportalen_tema' ); ?></a>
 		<header id="masthead" class="site-header">
+		<div class="header-top-wrapper">
 			<div class="site-branding">
 				<?php
 				the_custom_logo();
@@ -37,6 +38,7 @@
           ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php
+					
 				
 				endif;
 		
@@ -58,17 +60,18 @@
 				);
 				?>
 
-      </nav><!-- #site-navigation -->
-		</header><!-- #masthead -->
+      	</nav><!-- #site-navigation -->
+	  	</div>
+	  	<?php if ( !is_front_page () ) : ?>
+			<div class="bottom-header-wrapper">
+				<?php echo do_shortcode("[hp_search_sc]"); ?>
+			</div>
+		<?php endif; ?>
+
+	</header><!-- #masthead -->
 
 
 <script>
-	let menu = document.querySelector("div#primary-menu")
-	let ul = menu.firstElementChild
-	let button = document.createElement("button")
-	ul.appendChild(button)
-	button.classList.add("secondary_btn")
-	button.innerText = "LOGGA IN"
 
 	let menuButton = document.querySelector("button.menu-toggle")
 	let links = document.querySelector(".menu")
@@ -80,26 +83,30 @@
 		links.classList.toggle("show-links")
 	});
 
+	const loginButton = document.querySelector('.menu-item:last-child a');
+	loginButton.classList.add("secondary_btn")
+
 	<?php if ( is_front_page()  ) :	?>
-
-		document.querySelector("div.site-branding").style.display = "none"
-
-		const list = document.querySelectorAll('li.page_item');
+	
+		let container = document.querySelector("div.site-branding").style.display = "none"
+		
+		const list = document.querySelectorAll('.menu-item:not(:last-child)');
 		for (let li of list) {
 			li.style.display = "none";
 		}
+		
+
+		document.querySelector("div.header-top-wrapper").style.backgroundImage = "none";
+	
 		menuButton.style.display = "none";
 		links.classList.add("show-links")
+		let btn = document.querySelector(".secondary_btn")
 		document.querySelector(".secondary_btn").classList.add("landingPageMobileButton")
-		document.querySelector(".secondary_btn").style.marginTop = "0";
 		
 		let header = document.querySelector("header.site-header")
 		header.classList.add("landingPageHeader")
-		
-		let h1 = document.createElement("h1")
-		h1.classList.add("landingPageH1")
-		h1.textContent ="HAMNPORTALEN"
-		header.appendChild(h1)
 
-	<?php endif;?>
+	<?php
+		endif;
+	?>
 </script>
