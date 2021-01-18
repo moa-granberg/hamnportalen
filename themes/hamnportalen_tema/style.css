@@ -952,6 +952,7 @@ textarea {
 	align-items: center;
 	height: 80vh;
 	justify-content: flex-start;
+	overflow-y: scroll;
 }
 
 @media screen and (min-width: 782px) {
