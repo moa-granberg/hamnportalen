@@ -31,16 +31,37 @@ const generateInfoWindow = (port) => {
   )
 }
 
+const getCenter = (list) => {
+  const getMedian = (arr) => {
+    arr.sort((a, b) => a-b);
+    const half = Math.floor(arr.length / 2);
+
+    if (arr.length % 2) {
+      return arr[half];
+    }
+
+    return (arr[half - 1] + arr[half]) / 2.0;
+  }
+
+  const lat = parseFloat(getMedian(list.lat).toFixed(6));
+  const lng = parseFloat(getMedian(list.lng).toFixed(6));
+  return { lat, lng };
+}
+
 const mapContainer = document.querySelector('.search-result-map-wrapper')
 
 // Initialize and add the map
 async function initMap() {
   let ports = await getPorts();
-  const center = { lat: ports[0].lat, lng: ports[0].long };
+
+  const center = getCenter( {
+    lat: ports.map(port => port.lat),
+    lng: ports.map(port => port.long),
+  });
 
   const map = new google.maps.Map(mapContainer, {
     zoom: 14,
-    center: center,
+    center,
   });
 
   const features = ports.map(port => {
