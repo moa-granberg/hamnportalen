@@ -1394,6 +1394,14 @@ div.hide-search-result-mobile {
 	padding: 2rem 0;
 }
 
+.contact-info-wrapper {
+	text-transform: none;
+}
+
+.contact-info-wrapper span {
+	font-weight: bold;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
