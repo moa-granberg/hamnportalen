@@ -102,7 +102,7 @@ async function initMap() {
   if (ports.length === 0) {
     map.setZoom(4.7); //magic number where whole of Sweden is visible 
   } else if (ports.length === 1) {
-    map.setZoom(14);
+    map.setZoom(10);
   } else {
     map.fitBounds(bounds);
   }
