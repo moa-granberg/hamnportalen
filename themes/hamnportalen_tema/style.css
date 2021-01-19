@@ -718,25 +718,21 @@ textarea {
 # Header
 --------------------------------------------------------------*/
 header.site-header {
-	background-image: url("./assets/images/mobile-header-dropdown-image.jpg");
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	height: 20vh;
 	display: flex;
-	justify-content: space-between;
-	padding: 1rem;
-}
-
-header.site-header h1.site-title {
-	margin: 2rem 0 2rem 0;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 1;
 }
 
 header.site-header #site-navigation {
-	margin-top: 2.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+}
+
+header.site-header #site-navigation ul li {
+	margin-top: 1.3rem;
 }
 
 header.site-header #site-navigation button:hover,
@@ -766,14 +762,49 @@ header.site-header #site-navigation button.cancel-cross {
 	background-color: transparent;
 }
 
+div.header-top-wrapper {
+	display: flex;
+	background-image: url("./assets/images/mobile-header-dropdown-image.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding: 1rem;
+	align-items: center;
+}
+
+div.header-top-wrapper .site-branding {
+	margin-bottom: auto;
+}
+
+div.header-top-wrapper .site-branding h1 {
+	margin: 0;
+}
+
+@media only screen and (min-width: 782px) {
+	div.header-top-wrapper {
+		padding: 1rem 0 1rem 0;
+	}
+}
+
+.bottom-header-wrapper {
+	background-color: #87bcde;
+	width: 100%;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+}
+
+.bottom-header-wrapper .hp_search_form {
+	width: 100%;
+}
+
 header.landingPageHeader {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start !important;
-	height: 100vh;
-	background-image: url("./assets/images/desktop-landingpage-image.png");
-	background-size: fill;
+	background-image: none;
 	text-align: center;
 }
 
@@ -787,19 +818,13 @@ div#primary-menu ul {
 	align-items: flex-end;
 }
 
-div#primary-menu ul li,
-div#primary-menu ul button {
+div#primary-menu ul li {
 	margin-top: 2rem;
-}
-
-div#primary-menu ul button {
-	border: none;
-	padding: 0;
 }
 
 h1.site-title a {
 	text-decoration: none;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	text-transform: uppercase;
 	color: #001aff !important;
 }
@@ -811,15 +836,14 @@ h1.site-title a {
 	overflow: hidden;
 }
 
-.menu {
-	display: none;
-}
-
 .show-links {
-	display: block;
+	display: flex !important;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
-button.landingPageMobileButton {
+a.landingPageMobileButton {
+	border: none;
 	padding: 0.8rem 1.5rem !important;
 	border: 1px solid #e227d0 !important;
 }
@@ -834,7 +858,7 @@ button.landingPageMobileButton {
 		align-items: center;
 	}
 	.main-navigation a,
-	.main-navigation button.secondary_btn {
+	.main-navigation .secondary_btn {
 		display: block !important;
 		margin-right: 1.8rem;
 	}
@@ -845,18 +869,18 @@ button.landingPageMobileButton {
 		font-size: 3rem;
 		margin-left: 2rem;
 	}
-	div#primary-menu ul {
+	ul#primary-menu {
 		flex-direction: row;
 		align-items: center;
+		justify-content: center;
 	}
-	div#primary-menu ul li,
-	div#primary-menu ul button {
-		margin-top: 0;
+	header.site-header #site-navigation ul li {
+		margin-top: 0px;
 	}
 	menu {
 		display: block;
 	}
-	button.secondary_btn {
+	.secondary_btn {
 		padding: 0.8rem 1.5rem !important;
 		border: 1px solid #e227d0 !important;
 	}
