@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "start.css",
+	"sources": [
+		"../../sass/components/pages/start.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,mBAAmB,CAAC;CAChB,MAAM,EAAE,aAAa;CAExB"
+}
