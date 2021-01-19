@@ -26,7 +26,7 @@ if ($_GET['search_params']) {
     //sorts by lowest price if price is posted
     if (isset($_POST['price'])) {
       function cmp($a, $b) {
-        return strcmp(get_field('price', $a->ID), get_field('price', $b->ID),);
+        return strcmp(get_field('price', $a->ID), get_field('price', $b->ID));
       }
       usort($results, 'cmp');
     }
@@ -34,7 +34,7 @@ if ($_GET['search_params']) {
     //sorts by rating
     if (isset($_POST['rating'])) {
       function cmp($a, $b) {
-        return strcmp(get_field('rating', $b->ID), get_field('rating', $a->ID),);
+        return strcmp(get_field('rating', $b->ID), get_field('rating', $a->ID));
       }
       usort($results, 'cmp');
     }
