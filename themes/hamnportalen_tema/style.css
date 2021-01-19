@@ -70,6 +70,13 @@ h3 {
 	margin: 0;
 }
 
+h4 {
+	font-family: "Dosis", sans-serif;
+	color: #202020;
+	font-size: 1rem;
+	margin: 0;
+}
+
 p {
 	font-family: "Montserrat", sans-serif;
 	color: #202020;
@@ -1151,6 +1158,209 @@ button.landingPageMobileButton {
 
 .port-main-wrapper .port-booking {
 	grid-area: booking;
+}
+
+.search-results-main-wrapper {
+	margin: 2rem 0;
+}
+
+@media screen and (min-width: 782px) {
+	.search-results-main-wrapper {
+		display: grid;
+		grid: 1fr / 1fr 1fr;
+		margin: 2rem;
+	}
+}
+
+.hide-search-result-mobile {
+	display: none;
+}
+
+form.show-search-result-mobile {
+	position: fixed;
+	bottom: 1rem;
+	left: 0;
+	right: 0;
+}
+
+form.show-search-result-mobile > input {
+	margin: auto;
+	padding: 1.2rem 2.5rem;
+}
+
+@media screen and (min-width: 782px) {
+	form.show-search-result-mobile,
+	form.hide-search-result-mobile {
+		display: none;
+	}
+}
+
+div.show-search-result-mobile,
+div.hide-search-result-mobile {
+	width: 100vw;
+	height: 80vh;
+}
+
+@media screen and (min-width: 782px) {
+	div.show-search-result-mobile,
+	div.hide-search-result-mobile {
+		display: block;
+		display: flex;
+		width: 100%;
+	}
+}
+
+.search-result-list-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+	justify-content: flex-start;
+	overflow-y: scroll;
+	margin: auto;
+}
+
+@media screen and (min-width: 782px) {
+	.search-result-list-wrapper {
+		align-items: flex-start;
+	}
+}
+
+.search-result-list-wrapper .search-result-sorting-form {
+	display: flex;
+	margin-left: 1rem;
+	text-transform: uppercase;
+}
+
+.search-result-list-wrapper .search-result-sorting-form input[type='submit'] {
+	border: none;
+	background-color: transparent;
+	margin-left: 1rem;
+	font-family: 'Montserrat';
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.search-result-list-wrapper .search-result-sorting-form input[type='submit']:hover {
+	text-decoration: underline;
+}
+
+.search-result-list-wrapper .search-result-port-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 300px;
+	background-color: #eaeaea;
+	padding: 1rem;
+	margin: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 782px) {
+	.search-result-list-wrapper .search-result-port-wrapper {
+		flex-direction: row;
+		min-width: 500px;
+		width: auto;
+	}
+}
+
+.search-result-list-wrapper .search-result-port-wrapper:hover {
+	box-shadow: 0 0 15px rgba(32, 32, 32, 0.5);
+}
+
+.search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper {
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper h2 {
+	font-weight: 400;
+}
+
+.search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper h4 {
+	margin: 0;
+}
+
+.search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-price {
+	color: #e00000;
+	margin-bottom: 2rem;
+}
+
+.search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-facility-wrapper {
+	display: flex;
+	margin: 0.75rem 0;
+}
+
+.search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-facility-wrapper img {
+	margin: 0 0.75rem 0 0;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+@media screen and (min-width: 782px) {
+	.search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper {
+		width: auto;
+	}
+}
+
+.search-result-list-wrapper .search-result-port-wrapper img {
+	width: 270px;
+	height: 200px;
+	object-fit: cover;
+}
+
+.search-result-list-wrapper .search-result-list-error-wrapper {
+	text-align: center;
+	flex: 1;
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-result-map-wrapper {
+	width: inherit;
+	height: inherit;
+}
+
+@media screen and (min-width: 782px) {
+	.search-result-map-wrapper {
+		border-radius: 0.5rem;
+	}
+}
+
+.map-info {
+	display: block;
+	text-transform: uppercase;
+	text-align: center;
+	margin-left: 0.3rem;
+	margin-top: 0.3rem;
+	text-decoration: none;
+}
+
+.map-info__img-wrapper {
+	width: 100%;
+	max-width: 350px;
+}
+
+.map-info__img-wrapper img {
+	width: 100%;
+}
+
+.map-info__title {
+	margin-top: 1rem;
+	font-weight: 400;
+}
+
+.map-info__price {
+	color: #e00000;
+	font-family: 'Dosis';
+	margin-top: 0;
 }
 
 /*--------------------------------------------------------------
