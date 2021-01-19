@@ -99,7 +99,7 @@ if ($_GET['search_params']) {
         </a>";
     }
   }else {
-    $ports_html = "<div class='search-result-list-error-wrapper'><h2>Inga hamnar matchar din sökning. Vad god sök igen!</h2></div>";
+    $ports_html = "<div class='search-result-list-error-wrapper'><h2>Inga hamnar matchar din sökning. Var god sök igen!</h2></div>";
   }
 }else {
   $ports_html = "<div class='search-result-list-error-wrapper'><h2>Var god gör en sökning först!</h2></div>";
