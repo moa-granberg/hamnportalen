@@ -1,0 +1,19 @@
+.port-facilities.port-article {
+	margin: 1.5rem 1rem;
+}
+
+.port-facilities__facilities-wrapper {
+	display: grid;
+	grid: auto/repeat(2, auto);
+}
+
+.port-facilities__facility {
+	display: flex;
+	margin: 0.75rem 0;
+}
+
+.port-facilities__facility img {
+	margin-right: 0.5rem;
+}
+
+/*# sourceMappingURL=facilities.css.map */

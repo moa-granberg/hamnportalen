@@ -35,6 +35,7 @@
 		"sass/components/media/_galleries.scss",
 		"sass/components/pages/booking-confirmation.scss",
 		"sass/components/pages/port.scss",
+		"sass/components/pages/port/facilities.scss",
 		"sass/components/pages/port/port-info.scss",
 		"sass/components/pages/search-results.scss",
 		"sass/components/pages/start.scss",

@@ -1,0 +1,25 @@
+.port-facilities {
+  &.port-article {
+    margin: 1.5rem 1rem;
+  }
+
+  &__facilities-wrapper {
+    @media screen and (min-width: $desktop-bp) {
+      display: grid;
+      grid: auto / repeat(2, auto);
+    }
+  }
+
+  &__facility {
+    display: flex;
+    margin: 0.75rem 0;
+
+    img {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .secondary_btn {
+    margin: auto;
+  }
+}

@@ -1184,6 +1184,31 @@ a.landingPageMobileButton {
 	grid-area: booking;
 }
 
+.port-facilities.port-article {
+	margin: 1.5rem 1rem;
+}
+
+@media screen and (min-width: 782px) {
+	.port-facilities__facilities-wrapper {
+		display: grid;
+		grid: auto/repeat(2, auto);
+	}
+}
+
+.port-facilities__facility {
+	display: flex;
+	margin: 0.75rem 0;
+}
+
+.port-facilities__facility img {
+	margin-right: 0.5rem;
+}
+
+.port-facilities .secondary_btn {
+	margin: auto;
+
+}
+
 .port-article__header {
 	margin: 0px;
 }
@@ -1234,6 +1259,7 @@ a.landingPageMobileButton {
 	position: relative;
 	background: none;
 	height: auto;
+
 }
 
 .search-results-main-wrapper {
