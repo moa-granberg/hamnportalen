@@ -1,0 +1,8 @@
+.port-map {
+  width: 100%;
+  height: 15rem;
+  
+  @media screen and (min-width: $desktop-bp) {
+    height: 30rem;
+  }
+}

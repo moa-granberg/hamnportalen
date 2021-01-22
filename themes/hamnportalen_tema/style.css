@@ -1184,6 +1184,17 @@ a.landingPageMobileButton {
 	grid-area: booking;
 }
 
+.port-map {
+	width: 100%;
+	height: 15rem;
+}
+
+@media screen and (min-width: 782px) {
+	.port-map {
+		height: 30rem;
+	}
+}
+
 .port-facilities.port-article {
 	margin: 1.5rem 1rem;
 }
