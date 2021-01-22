@@ -1132,7 +1132,7 @@ a.landingPageMobileButton {
 	.port-main-wrapper {
 		display: grid;
 		grid: auto / 1fr 3fr 2fr 1fr;
-		grid-template-areas: 'hero hero hero hero' '. info booking .' '. facilities booking .' '. contact booking .' '. road-description booking .' 'map map map map' '. events . .' '. personnel . .' '. reviews . .';
+		grid-template-areas: 'hero hero hero hero' '. info booking .' '. facilities booking .' '. contact booking .' '. road-description booking .' 'map map map map' '. events . .' '. personnel . .' '. reviews . .';
 	}
 }
 
@@ -1217,7 +1217,6 @@ a.landingPageMobileButton {
 
 .port-facilities .secondary_btn {
 	margin: auto;
-
 }
 
 .port-article__header {
@@ -1270,7 +1269,6 @@ a.landingPageMobileButton {
 	position: relative;
 	background: none;
 	height: auto;
-
 }
 
 .search-results-main-wrapper {
@@ -1401,6 +1399,16 @@ div.hide-search-result-mobile {
 .search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-price {
 	color: #e00000;
 	margin-bottom: 2rem;
+}
+
+.search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-rating-wrapper {
+	margin: 0;
+	display: flex;
+}
+
+.search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-rating-wrapper img {
+	max-width: 1.5rem;
+	max-height: 1.5rem;
 }
 
 .search-result-list-wrapper .search-result-port-wrapper .search-result-text-wrapper .search-result-facility-wrapper {

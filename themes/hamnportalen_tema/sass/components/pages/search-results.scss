@@ -116,6 +116,16 @@ div.hide-search-result-mobile {
         margin-bottom: 2rem;
       }
 
+      .search-result-rating-wrapper {
+        margin: 0;
+        display: flex;
+
+        img {
+          max-width: 1.5rem;
+          max-height: 1.5rem;
+        }
+      }
+      
       .search-result-facility-wrapper {
         display: flex;
         margin: 0.75rem 0;

@@ -47,6 +47,7 @@ if ($_GET['search_params']) {
       $port_price = get_field('price', $port->ID);
       $port_image1 = get_field('hero_img_1', $port->ID);
       $port_facilities = get_field('facilities', $port->ID);
+      $port_rating = get_field('rating', $port->ID);
       $port_url = get_post_permalink($port->ID, true);
 
       //Booleans
@@ -56,6 +57,15 @@ if ($_GET['search_params']) {
 
       //Create html-string with facilities
       $facilities = "";
+
+      //Create html-string with stars for rating
+      $rating = "";
+      $star_url = get_template_directory_uri() . "/assets/images/star.svg";
+      for ($i = 0; $i < $port_rating; $i++) {
+        $rating = $rating . "
+          <img src='$star_url'>
+        ";
+      }
 
       if($port_restaurant) {
         $restaurant_url = get_theme_file_uri('/assets/images/restaurant.svg');
@@ -92,6 +102,7 @@ if ($_GET['search_params']) {
         <a href='$port_url' class='search-result-port-wrapper'>
           <div class='search-result-text-wrapper'>
             <h2>$port_name</h2>
+            <div class='search-result-rating-wrapper'>$rating</div>
             <h4 class='search-result-price'>$port_price kr/dygn</h4>
             $facilities
           </div>
