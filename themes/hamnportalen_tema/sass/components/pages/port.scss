@@ -3,7 +3,7 @@
 
   @media screen and (min-width: $desktop-bp) {
     display: grid;
-    grid: auto / 1fr 3fr 2fr 1fr;
+    grid: auto / 5% 55% 35% 5%;
     grid-template-areas:
       'hero hero hero hero'
       '. info booking .'

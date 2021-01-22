@@ -6,24 +6,25 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 5;
 }
 
-@media only screen and (min-width: 782px) {
-  .calendar-wrapper {
-    width: 400px;
-    border-radius: 0.4rem;
-    overflow: hidden;
-    position: relative;
+  @media only screen and (min-width: 950px) {
+    .calendar-wrapper {
+      width: 400px;
+      border-radius: 0.4rem;
+      overflow: hidden;
+      position: relative;
+      transform: scale(.9);
 
-    /* Ändra margin senare! */
-    margin: auto;
+      /* Ändra margin senare! */
+      margin: auto;
+    }
   }
-}
 
 /* Header-wrapper */
 .calendar-wrapper__header {
@@ -53,7 +54,7 @@
   transition: max-height 0.4s ease-in-out;
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (min-width: 950px) {
   .booking_calendar_main_container {
     border-radius: 0;
     max-height: 1400px;
@@ -86,6 +87,10 @@
 /* Next month label */
 .booking_calendar_container .wpda-month-name {
   display: inline-block;
+}
+
+.booking_calendar_container, .wpdevart-booking-form-container {
+  max-width: inherit;
 }
 
 /* calender day container */

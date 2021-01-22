@@ -20,7 +20,7 @@ html {
   max-height: 0 !important;
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (min-width: 950px) {
   html {
     --calendar-width: 400px;
   }
