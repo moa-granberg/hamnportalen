@@ -1132,7 +1132,15 @@ a.landingPageMobileButton {
 	.port-main-wrapper {
 		display: grid;
 		grid: auto / 1fr 3fr 2fr 1fr;
-		grid-template-areas: 'hero hero hero hero' '. info booking .' '. facilities booking .' '. contact booking .' '. road-description booking .' 'map map map map' '. events . .' '. personnel . .' '. reviews . .';
+		grid-template-areas: 'hero hero hero hero'
+ '. info booking .'
+ '. facilities booking .'
+ '. contact booking .'
+ '. road-description booking .'
+ 'map map map map'
+ '. events . .'
+ '. personnel . .'
+ '. reviews . .';
 	}
 }
 
@@ -1182,6 +1190,58 @@ a.landingPageMobileButton {
 
 .port-main-wrapper .port-booking {
 	grid-area: booking;
+}
+
+.port-article__header {
+	margin: 0px;
+}
+
+.port-article__header h1 {
+	margin: 0;
+	font-size: 2.5rem;
+}
+
+.port-article__header .port-price {
+	color: #e00000;
+	text-transform: uppercase;
+}
+
+.port-article__header .__details {
+	margin-top: 2rem;
+}
+
+.port-article__description {
+	position: relative;
+	margin-top: 2rem;
+	width: 100%;
+}
+
+.port-article__description h2 {
+	line-height: 2rem;
+	margin-bottom: 1rem;
+}
+
+.fadeOn {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 100px;
+	text-transform: uppercase;
+	background: linear-gradient(0deg, white 60%, rgba(255, 255, 255, 0) 100%);
+}
+
+.fadeOn p {
+	cursor: pointer;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.fadeOff {
+	position: relative;
+	background: none;
+	height: auto;
 }
 
 .search-results-main-wrapper {
@@ -1386,6 +1446,7 @@ div.hide-search-result-mobile {
 	font-family: 'Dosis';
 	margin-top: 0;
 }
+
 
 .start-main-wrapper .start-article__header h2 {
 	color: #001aff;
