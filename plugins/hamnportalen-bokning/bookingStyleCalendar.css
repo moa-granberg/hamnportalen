@@ -20,9 +20,7 @@
       overflow: hidden;
       position: relative;
       transform: scale(.9);
-
-      /* Ändra margin senare! */
-      margin: auto;
+      height: fit-content;
     }
   }
 
