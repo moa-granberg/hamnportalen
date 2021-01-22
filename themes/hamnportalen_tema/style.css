@@ -1455,6 +1455,55 @@ div.hide-search-result-mobile {
 	padding: 2rem 0;
 }
 
+.start-events.start-article.hero {
+	background-image: url("./wp-content/../assets/images/desktop-landingpage-image.png");
+	background-size: cover;
+	height: 110vh;
+	margin-top: -6.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.start-events.start-article.hero h1 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.5rem;
+	color: #001aff;
+	margin-top: -16rem;
+}
+
+@media screen and (max-width: 782px) {
+	.start-events.start-article.hero .hp_search_form {
+		width: 90%;
+		max-width: 400px;
+	}
+	.start-events.start-article.hero .hp_search_form span {
+		padding: .3rem 0 0 .3rem;
+	}
+	.start-events.start-article.hero #hp_search_port {
+		font-size: 0.8rem;
+	}
+	.start-events.start-article.hero .primary_btn {
+		margin: 0.2rem;
+	}
+}
+
+@media screen and (min-width: 782px) {
+	.start-events.start-article.hero {
+		background-image: url("./wp-content/../assets/images/desktop-landingpage-image.png");
+	}
+	.start-events.start-article.hero h1 {
+		margin-top: -18rem;
+		font-size: 3rem;
+	}
+	.start-events.start-article.hero .hp_search_form {
+		margin-top: 1.5rem;
+		width: 600px;
+	}
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

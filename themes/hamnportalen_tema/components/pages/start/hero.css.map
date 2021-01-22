@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "hero.css",
+	"sources": [
+		"../../../sass/components/pages/start/hero.scss"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,aAAa,AAAA,cAAc,AAAA,KAAK,CAAC;CAC7B,gBAAgB,EAAE,kEAAkE;CACpF,eAAe,EAAE,KAAK;CACtB,MAAM,EAAE,KAAK;CACb,UAAU,EAAE,OAAO;CAOtB;;AAXD,AAKI,aALS,AAAA,cAAc,AAAA,KAAK,CAK5B,EAAE,CAAC;CACC,UAAU,EAAE,MAAM;CACrB"
+}
