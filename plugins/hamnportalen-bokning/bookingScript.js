@@ -35,9 +35,9 @@ const renderCalendar = () => {
     wrapperhead.addEventListener('click', () => {
       calendar.classList.toggle('hide');
     });
-  }
 
-  document.querySelector('#wpdevart-submit1').addEventListener('click', () => submitForm());
+    document.querySelector('#wpdevart-submit1').addEventListener('click', () => submitForm());
+  }
 };
 
 const validEmail = email => {
