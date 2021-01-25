@@ -1,0 +1,49 @@
+.wpforms-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#post-74 header h1{
+    text-align: center;
+}
+#wpforms-form-202 .wpforms-field-container input {
+    max-width: 100%;
+    border-radius: 10rem;
+    padding: 1.4rem 1.5rem
+}
+
+#wpforms-form-202 {
+    width: 40vw;
+}
+
+#wpforms-form-202 label, #wpforms-form-202 button{
+    font-family: 'Dosis';
+    text-transform: uppercase;
+}
+
+#wpforms-form-202 button {
+    border-radius: 10rem;
+    background: #001aff;
+    color: #f9f9f9;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.8rem 1.5rem;
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    border: none;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+#wpforms-form-202 button:hover {
+    background-color: #0012b0;
+}
+
+@media only screen and (max-width: 720px) {
+    #wpforms-form-202 {
+        width: 90vw;
+    }
+}
