@@ -1,7 +1,7 @@
 <?php
 
 if ($_GET['search_params']) {
-  $search_query = substr($_GET['search_params'], 0, -1);
+  $search_query = sanitize_text_field( substr($_GET['search_params'], 0, -1) );
 
   global $wpdb;
   $table_name = $wpdb->prefix . "posts";
