@@ -59,5 +59,7 @@ const submitForm = () => {
   }
 };
 
-editFormText();
-renderCalendar();
+if (!window.location.href.includes('wp-admin')) {
+  editFormText();
+  renderCalendar();
+}

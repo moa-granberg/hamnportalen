@@ -4,12 +4,14 @@ $portData = get_fields( get_the_id() );
 
 //så här kommer man åt separata fält
 // $portData['description'];
+
+$calendar_id = $portData['calendar_id'];
 ?>
 
 <section class="port-main-wrapper">
   <?php
     require_once(__DIR__ . '/hero.php');
-    echo do_shortcode('[wpdevart_booking_calendar id="1"]');
+    echo do_shortcode("[wpdevart_booking_calendar id='$calendar_id']");
     require_once(__DIR__ . '/info.php');
     require_once(__DIR__ . '/facilities.php');
     require_once(__DIR__ . '/contact_info.php');

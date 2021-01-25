@@ -1,5 +1,5 @@
 /* Labels of form */
-.wpdevart-booking-form .wpdevart-fild-item-container {
+.calendar-wrapper .wpdevart-booking-form .wpdevart-fild-item-container {
   font-style: normal;
   font-family: 'Dosis';
   text-transform: uppercase;
@@ -7,13 +7,13 @@
 }
 
 /* form wrapper */
-.wpdevart-booking-form {
+.calendar-wrapper .wpdevart-booking-form {
   border: none;
   background-color: var(--white);
 }
 
 /* Form */
-.wpdevart-booking-form form {
+.calendar-wrapper .wpdevart-booking-form form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@
 }
 
 /* SUBMIT BUTTON */
-.wpdevart-form-section > button[type='submit'] {
+.calendar-wrapper .wpdevart-form-section > button[type='submit'] {
   background-color: var(--blue);
   display: block;
   text-transform: uppercase;
@@ -34,32 +34,35 @@
 }
 
 /* Lower form wrapper */
-.wpdevart-form-section {
+.calendar-wrapper .wpdevart-form-section {
   margin-left: 0;
 }
 
 /* input fields & textarea */
-.wpdevart-booking-form .wpdevart-fild-item-container input[type='text'],
-.wpdevart-booking-form .wpdevart-fild-item-container textarea {
+.calendar-wrapper .wpdevart-booking-form .wpdevart-fild-item-container input[type='text'],
+.calendar-wrapper .wpdevart-booking-form .wpdevart-fild-item-container textarea {
   width: 100%;
   resize: none;
 }
 
 /* Total box: total span */
-.wpdevart-total-price.reserv_info_row > .reserv_info_cell {
+.calendar-wrapper .wpdevart-total-price.reserv_info_row > .reserv_info_cell {
   padding-left: 1rem;
 }
 
 /* Labels in summary */
-.reserv_info_cell {
+.calendar-wrapper .reserv_info_cell {
   text-transform: uppercase;
   font-family: 'Dosis';
   font-weight: 600;
 }
 
 /* removes item count & form heading */
-.wpdevart-booking-form .wpdevart-check-section .wpdevart-fild-item-container:nth-child(3),
-#check-info-1 > div:nth-child(3),
-.wpdevart-booking-form h4 {
+.calendar-wrapper
+  .wpdevart-booking-form
+  .wpdevart-check-section
+  .wpdevart-fild-item-container:nth-child(3),
+.calendar-wrapper #check-info-1 > div:nth-child(3),
+.calendar-wrapper .wpdevart-booking-form h4 {
   display: none !important;
 }

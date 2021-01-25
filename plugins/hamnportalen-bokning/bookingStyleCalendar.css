@@ -13,16 +13,16 @@
   z-index: 5;
 }
 
-  @media only screen and (min-width: 950px) {
-    .calendar-wrapper {
-      width: 400px;
-      border-radius: 0.4rem;
-      overflow: hidden;
-      position: relative;
-      transform: scale(.9);
-      height: fit-content;
-    }
+@media only screen and (min-width: 950px) {
+  .calendar-wrapper {
+    width: 400px;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.9);
+    height: fit-content;
   }
+}
 
 /* Header-wrapper */
 .calendar-wrapper__header {
@@ -38,7 +38,7 @@
 }
 
 /* Main calendar container */
-.booking_calendar_main_container {
+.calendar-wrapper .booking_calendar_main_container {
   font-family: Montserrat;
   width: var(--calendar-width);
   margin: 0 auto 0.5rem auto;
@@ -53,7 +53,7 @@
 }
 
 @media only screen and (min-width: 950px) {
-  .booking_calendar_main_container {
+  .calendar-wrapper .booking_calendar_main_container {
     border-radius: 0;
     max-height: 1400px;
     margin: auto;
@@ -61,19 +61,19 @@
   }
 }
 
-.booking_calendar_container {
+.calendar-wrapper .booking_calendar_container {
   margin: 0;
 }
 
 /* Links in calendar */
-.booking_calendar_main_container a {
+.calendar-wrapper .booking_calendar_main_container a {
   text-decoration: none;
   padding: 0 0.2rem;
   color: var(--black);
 }
 
 /* Calendar header (month & year) */
-.wpda-booking-calendar-head {
+.calendar-wrapper .wpda-booking-calendar-head {
   font-family: 'Dosis';
   text-transform: uppercase;
   font-weight: 600;
@@ -83,22 +83,23 @@
 }
 
 /* Next month label */
-.booking_calendar_container .wpda-month-name {
+.calendar-wrapper .booking_calendar_container .wpda-month-name {
   display: inline-block;
 }
 
-.booking_calendar_container, .wpdevart-booking-form-container {
+.calendar-wrapper .booking_calendar_container,
+.wpdevart-booking-form-container {
   max-width: inherit;
 }
 
 /* calender day container */
-.wpdevart-calendar-container > div {
+.calendar-wrapper .wpdevart-calendar-container > div {
   border: none !important;
   background-color: var(--white);
 }
 
 /* content of calendar day container */
-.wpdevart-calendar-container > div .wpda-day-header {
+.calendar-wrapper .wpdevart-calendar-container > div .wpda-day-header {
   border: 0.2rem solid var(--white);
   background-color: var(--white);
   display: flex;
@@ -111,47 +112,46 @@
 }
 
 /* Available */
-.wpdevart-calendar-container > div.wpdevart-available .wpda-day-header {
+.calendar-wrapper .wpdevart-calendar-container > div.wpdevart-available .wpda-day-header {
   color: var(--black) !important  ;
   background-color: var(--mediumgrey);
   cursor: pointer;
 }
 
 /* available hover */
-.wpdevart-calendar-container > div.wpdevart-available .wpda-day-header:hover {
+.calendar-wrapper .wpdevart-calendar-container > div.wpdevart-available .wpda-day-header:hover {
   background-color: var(--lightblue);
 }
 
-.wpdevart-calendar-container > div.past-day .wpda-day-header {
+.calendar-wrapper .wpdevart-calendar-container > div.past-day .wpda-day-header {
   background-color: var(--white);
   color: var(--darkgrey) !important;
-
 }
 
 /* booked */
-.wpdevart-calendar-container > div.wpdevart-booked .wpda-day-header {
+.calendar-wrapper .wpdevart-calendar-container > div.wpdevart-booked .wpda-day-header {
   background-color: var(--white) !important;
 }
 
 /* selected's container*/
-.wpdevart-calendar-container > div {
+.calendar-wrapper .wpdevart-calendar-container > div {
   box-shadow: none !important;
 }
 
 /* selected's header*/
-.wpdevart-calendar-container > div.wpdevart-available.selected .wpda-day-header {
+.calendar-wrapper .wpdevart-calendar-container > div.wpdevart-available.selected .wpda-day-header {
   color: var(--white) !important;
 }
 
 /* dates */
-.wpda-day-number {
+.calendar-wrapper .wpda-day-number {
   font-size: 1rem;
   text-align: center;
   padding: 0.5rem;
 }
 
 /* dates span */
-.wpda-day-number > span {
+.calendar-wrapper .wpda-day-number > span {
   font-family: 'Dosis';
   font-weight: 600;
   font-size: 1rem;
@@ -159,12 +159,12 @@
 }
 
 /* price, availability, legends-status */
-.day-availability,
-.day-price,
-.wpdevart-booking-legends {
+.calendar-wrapper .day-availability,
+.calendar-wrapper .day-price,
+.calendar-wrapper .wpdevart-booking-legends {
   display: none;
 }
 
-body.wp-admin .booking_calendar_main {
+.calendar-wrapper body.wp-admin .booking_calendar_main {
   width: 400px;
 }
