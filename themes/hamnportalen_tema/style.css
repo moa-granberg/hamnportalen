@@ -1540,6 +1540,89 @@ div.hide-search-result-mobile {
 	}
 }
 
+.start-attractions__content-wrapper {
+	background-image: url("./wp-content/../assets/images/lighthouse.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 1rem;
+}
+
+@media screen and (min-width: 782px) {
+	.start-attractions__content-wrapper {
+		padding: 5rem 1rem;
+	}
+}
+
+.attraction-card {
+	display: flex;
+	flex-direction: column;
+	background-color: #f9f9f9;
+	max-width: 600px;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	margin: 1rem 0;
+	box-shadow: 0 0 8px 4px rgba(32, 32, 32, 0.2);
+}
+
+@media screen and (min-width: 782px) {
+	.attraction-card {
+		margin: 1rem;
+		flex-direction: row;
+	}
+}
+
+.attraction-card img {
+	object-fit: cover;
+	height: 5rem;
+	width: 100%;
+}
+
+@media screen and (min-width: 782px) {
+	.attraction-card img {
+		height: inherit;
+		width: 10rem;
+		flex-direction: row;
+	}
+}
+
+.attraction-card__heading {
+	background-color: #84c915;
+	padding: 0.5rem 1rem;
+}
+
+.attraction-card__heading :first-child {
+	color: #f9f9f9;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+@media screen and (min-width: 782px) {
+	.attraction-card__heading :first-child {
+		text-align: left;
+	}
+}
+
+.attraction-card__inner-text-wrapper {
+	margin: 1rem;
+	overflow-y: scroll;
+}
+
+@media screen and (min-width: 782px) {
+	.attraction-card__inner-text-wrapper {
+		height: 200px;
+	}
+}
+
+.attraction-card__inner-text-wrapper :first-child {
+	text-transform: uppercase;
+	margin: 0 0 1rem 0;
+}
+
 .contact-info-wrapper {
 	text-transform: none;
 }

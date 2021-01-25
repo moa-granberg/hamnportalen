@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "attractions.css",
+	"sources": [
+		"../../../sass/components/pages/start/attractions.scss"
+	],
+	"names": [],
+	"mappings": "AACG,AAAD,mCAAkB,CAAC;CACjB,gBAAgB,EAAE,mDAAmD;CACrE,mBAAmB,EAAE,MAAM;CAC3B,iBAAiB,EAAE,SAAS;CAC5B,eAAe,EAAE,KAAK;CACvB"
+}
