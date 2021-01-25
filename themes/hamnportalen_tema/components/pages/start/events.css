@@ -1,0 +1,30 @@
+.hp-event {
+	display: flex;
+	width: 100%;
+	max-width: 450px;
+	height: 250px;
+	border: 1px solid green;
+}
+
+.hp-event #hp-event__info-wrapper {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid blue;
+}
+
+.hp-event #hp-event__info-wrapper .hp-event-h3 {
+	text-align: left;
+}
+
+.hp-event .hp-event__img-wrapper {
+	width: 40%;
+	object-fit: cover;
+}
+
+.hp-event .hp-event__img-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/*# sourceMappingURL=events.css.map */
