@@ -1,0 +1,25 @@
+.cards-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.personnel-card {
+	display: grid;
+	grid-template-columns: 40% 60%;
+	gap: 3rem;
+	padding: 1.5rem;
+}
+
+.personnel-card-wrapper .personnel-card {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1em;
+}
+
+.personnel-card-wrapper .personnel-card img {
+	border-radius: 50%;
+	height: 5em;
+	margin-right: 1.5em;
+}
+
+/*# sourceMappingURL=personnel.css.map */
