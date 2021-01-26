@@ -1,0 +1,69 @@
+.port-article.port-attractions-and-events {
+  position: relative;
+
+  @media screen and (max-width: $desktop-bp) {
+    //OBS for mobile, needed for correct specificity
+    margin: auto;
+  }
+
+  .port-attractions-and-events__card-wrapper {
+    :first-child {
+      margin-top: 0 !important;
+    }
+
+    .attraction-card {
+      margin: 2rem auto;
+      max-width: none;
+      box-shadow: 0 4px 10px rgba($black, 0.2);
+
+      @media screen and (min-width: $desktop-bp) {
+        margin: 2rem 0;
+      }
+
+      &__heading.event {
+        background-color: $pink;
+      }
+
+      &__inner-text-wrapper {
+        height: auto;
+      }
+
+      .event-card__info-paragraph {
+        font-weight: 700;
+        text-align: center;
+        margin: 0 1rem 1rem 1rem;
+
+        @media screen and (min-width: $desktop-bp) {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  #event-fader {
+    &.event-fadeOn {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 100px;
+      text-transform: uppercase;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 100%);
+
+      button {
+        margin: 3rem auto 0 auto;
+      }
+    }
+
+    &.event-fadeOff {
+      position: relative;
+      background: none;
+      height: auto;
+
+      button {
+        margin: 1rem auto 0 auto;
+      }
+    }
+  }
+}

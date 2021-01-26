@@ -882,7 +882,7 @@ a.landingPageMobileButton {
 	}
 	.secondary_btn {
 		padding: 0.8rem 1.5rem !important;
-		border: 1px solid #e227d0 !important;
+		border: 1px solid #e227d0;
 	}
 	.landingPageH1 {
 		font-size: 4rem;
@@ -1168,7 +1168,7 @@ a.landingPageMobileButton {
 	grid-area: map;
 }
 
-.port-main-wrapper .port-article.port-events {
+.port-main-wrapper .port-article.port-attractions-and-events {
 	grid-area: events;
 }
 
@@ -1301,6 +1301,77 @@ a.landingPageMobileButton {
 	position: relative;
 	background: none;
 	height: auto;
+}
+
+.port-article.port-attractions-and-events {
+	position: relative;
+}
+
+@media screen and (max-width: 782px) {
+	.port-article.port-attractions-and-events {
+		margin: auto;
+	}
+}
+
+.port-article.port-attractions-and-events .port-attractions-and-events__card-wrapper :first-child {
+	margin-top: 0 !important;
+}
+
+.port-article.port-attractions-and-events .port-attractions-and-events__card-wrapper .attraction-card {
+	margin: 2rem auto;
+	max-width: none;
+	box-shadow: 0 4px 10px rgba(32, 32, 32, 0.2);
+}
+
+@media screen and (min-width: 782px) {
+	.port-article.port-attractions-and-events .port-attractions-and-events__card-wrapper .attraction-card {
+		margin: 2rem 0;
+	}
+}
+
+.port-article.port-attractions-and-events .port-attractions-and-events__card-wrapper .attraction-card__heading.event {
+	background-color: #e227d0;
+}
+
+.port-article.port-attractions-and-events .port-attractions-and-events__card-wrapper .attraction-card__inner-text-wrapper {
+	height: auto;
+}
+
+.port-article.port-attractions-and-events .port-attractions-and-events__card-wrapper .attraction-card .event-card__info-paragraph {
+	font-weight: 700;
+	text-align: center;
+	margin: 0 1rem 1rem 1rem;
+}
+
+@media screen and (min-width: 782px) {
+	.port-article.port-attractions-and-events .port-attractions-and-events__card-wrapper .attraction-card .event-card__info-paragraph {
+		text-align: right;
+	}
+}
+
+.port-article.port-attractions-and-events #event-fader.event-fadeOn {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 100px;
+	text-transform: uppercase;
+	background: linear-gradient(0deg, white 60%, rgba(255, 255, 255, 0) 100%);
+}
+
+.port-article.port-attractions-and-events #event-fader.event-fadeOn button {
+	margin: 3rem auto 0 auto;
+}
+
+.port-article.port-attractions-and-events #event-fader.event-fadeOff {
+	position: relative;
+	background: none;
+	height: auto;
+}
+
+.port-article.port-attractions-and-events #event-fader.event-fadeOff button {
+	margin: 1rem auto 0 auto;
 }
 
 .search-results-main-wrapper {
@@ -1736,6 +1807,10 @@ div.hide-search-result-mobile {
 	}
 }
 
+.attraction-card__text-wrapper {
+	width: 100%;
+}
+
 .attraction-card__heading {
 	background-color: #84c915;
 	padding: 0.5rem 1rem;
@@ -1764,7 +1839,7 @@ div.hide-search-result-mobile {
 	}
 }
 
-.attraction-card__inner-text-wrapper :first-child {
+.attraction-card__inner-text-wrapper h4 {
 	text-transform: uppercase;
 	margin: 0 0 1rem 0;
 }
