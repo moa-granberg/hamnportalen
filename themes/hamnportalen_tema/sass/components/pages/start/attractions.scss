@@ -13,7 +13,7 @@
     padding: 3rem 1rem;
 
     @media screen and (min-width: $desktop-bp) {
-      padding: 5rem 1rem;
+      padding: 2rem 1rem;
     }
   }
 }
@@ -62,10 +62,10 @@
 
   &__inner-text-wrapper {
     margin: 1rem;
-    overflow-y: scroll;
-
+    
     @media screen and (min-width: $desktop-bp) {
       height: 200px;
+      overflow-y: scroll;
     }
 
     :first-child {

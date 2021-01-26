@@ -1567,7 +1567,7 @@ div.hide-search-result-mobile {
 	}
 	.start-events.start-article.hero .hp_search_form {
 		margin-top: 1.5rem;
-		width: 500px;
+		width: 600px;
 	}
 }
 
@@ -1579,11 +1579,12 @@ div.hide-search-result-mobile {
 	background-image: url("./wp-content/../assets/images/events-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	padding: 3rem 1rem;
 }
 
 @media screen and (min-width: 782px) {
 	.hp-event-wrapper {
-		padding: 2rem;
+		padding: 2rem 1rem;
 	}
 }
 
@@ -1594,13 +1595,15 @@ div.hide-search-result-mobile {
 
 .hp-event-card {
 	display: flex;
+	flex-direction: column-reverse;
 	width: 100%;
 	max-width: 600px;
-	height: 250px;
+	min-height: 250px;
 	background-color: #f9f9f9;
 	overflow: hidden;
 	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 	margin: 1rem 0;
+	border-radius: .5rem;
 	cursor: pointer;
 	transition: all .2s;
 }
@@ -1611,8 +1614,10 @@ div.hide-search-result-mobile {
 
 @media screen and (min-width: 782px) {
 	.hp-event-card {
-		border-radius: .5rem;
+		flex-direction: row;
 		margin: 1rem;
+		max-width: 600px;
+		height: 250px;
 	}
 }
 
@@ -1647,7 +1652,7 @@ div.hide-search-result-mobile {
 
 .hp-event-card #hp-event__info-wrapper .hp-event-description.lineclamp {
 	display: -webkit-box;
-	-webkit-line-clamp: 3;
+	-webkit-line-clamp: none;
 	-webkit-box-orient: vertical;
 }
 
@@ -1658,16 +1663,25 @@ div.hide-search-result-mobile {
 }
 
 .hp-event-card .hp-event__img-wrapper {
-	width: 80%;
-	height: 100%;
-	object-fit: cover;
+	height: 10rem;
+}
+
+@media screen and (min-width: 782px) {
+	.hp-event-card .hp-event__img-wrapper {
+		width: 80%;
+		height: 100%;
+	}
 }
 
 .hp-event-card .hp-event__img-wrapper img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	width: 600px;
+}
+
+@media screen and (min-width: 782px) {
+	.hp-event-card .hp-event__img-wrapper img {
+		height: 100%;
 	}
 }
 
@@ -1685,7 +1699,7 @@ div.hide-search-result-mobile {
 
 @media screen and (min-width: 782px) {
 	.start-attractions__content-wrapper {
-		padding: 5rem 1rem;
+		padding: 2rem 1rem;
 	}
 }
 
@@ -1740,12 +1754,12 @@ div.hide-search-result-mobile {
 
 .attraction-card__inner-text-wrapper {
 	margin: 1rem;
-	overflow-y: scroll;
 }
 
 @media screen and (min-width: 782px) {
 	.attraction-card__inner-text-wrapper {
 		height: 200px;
+		overflow-y: scroll;
 	}
 }
 

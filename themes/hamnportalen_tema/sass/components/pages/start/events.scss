@@ -6,9 +6,10 @@
   background-image: url("./wp-content/../assets/images/events-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 3rem 1rem;
 
   @media screen and (min-width: $desktop-bp) {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -19,13 +20,15 @@
 
 .hp-event-card {
   display: flex;
+  flex-direction: column-reverse;
   width: 100%;
   max-width: 600px;
-  height: 250px;
+  min-height: 250px;
   background-color: $white;
   overflow: hidden;
   box-shadow: 0 10px 15px rgba(0,0,0,.5);
   margin: 1rem 0;
+  border-radius: .5rem;
   cursor: pointer;
   transition: all .2s;
   
@@ -34,8 +37,10 @@
   }
   
   @media screen and (min-width: $desktop-bp) {
-    border-radius: .5rem;
+    flex-direction: row;
     margin: 1rem;
+    max-width: 600px;
+    height: 250px;
   }
 
   #hp-event__info-wrapper {
@@ -67,7 +72,7 @@
 
       &.lineclamp {
         display: -webkit-box;  
-        -webkit-line-clamp: 3;  
+        -webkit-line-clamp: none;  
         -webkit-box-orient: vertical;
         
         @media screen and (min-width: $desktop-bp) {
@@ -78,14 +83,21 @@
   }
 
   .hp-event__img-wrapper {
-    width: 80%;
-    height: 100%;        
-    object-fit: cover;
+    height: 10rem;
+    
+    @media screen and (min-width: $desktop-bp) {
+      width: 80%;
+      height: 100%;        
+    }
     
     & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @media screen and (min-width: $desktop-bp) {
+        height: 100%;        
+      }
     }    
   }
 }
