@@ -19,6 +19,5 @@ $calendar_id = $portData['calendar_id'];
     require_once(__DIR__ . '/map.php');
     require_once(__DIR__ . '/events.php');
     require_once(__DIR__ . '/personnel.php');
-    require_once(__DIR__ . '/reviews.php');
   ?>
 </section>
