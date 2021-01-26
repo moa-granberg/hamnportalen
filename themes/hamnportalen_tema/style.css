@@ -1335,6 +1335,7 @@ a.landingPageMobileButton {
 
 .port-article.port-attractions-and-events .port-attractions-and-events__card-wrapper .attraction-card__inner-text-wrapper {
 	height: auto;
+	overflow-y: hidden;
 }
 
 .port-article.port-attractions-and-events .port-attractions-and-events__card-wrapper .attraction-card .event-card__info-paragraph {
