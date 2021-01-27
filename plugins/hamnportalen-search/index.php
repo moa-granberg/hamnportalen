@@ -33,7 +33,9 @@ function redirect_to_query_result() {
     $exact_results = $wpdb->get_results(
       "SELECT * FROM $table_name 
       WHERE post_title = '$search_value'
-      AND post_status = 'publish'");
+      AND post_status = 'publish'
+      AND post_type = 'post'
+    ");
     
     if (count($exact_results) === 1) {
       $port_url = get_permalink($exact_results[0]);

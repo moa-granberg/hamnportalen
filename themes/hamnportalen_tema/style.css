@@ -1132,7 +1132,7 @@ a.landingPageMobileButton {
 	.port-main-wrapper {
 		display: grid;
 		grid: auto / 5% 55% 35% 5%;
-		grid-template-areas: 'hero hero hero hero' '. info booking .' '. facilities booking .' '. contact booking .' '. road-description booking .' 'map map map map' '. events . .' '. personnel . .' '. reviews . .';
+		grid-template-areas: 'hero hero hero hero' '. info booking .' '. facilities booking .' '. contact booking .' '. road-description booking .' 'map map map map' '. events . .' '. personnel . .' '. reviews . .';
 	}
 }
 
