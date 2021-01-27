@@ -1,6 +1,7 @@
-.port-map {
+.port-article.port-map {
   width: 100%;
   height: 15rem;
+  margin: 0;
   
   @media screen and (min-width: $desktop-bp) {
     height: 30rem;

@@ -1,11 +1,6 @@
 .port-article.port-attractions-and-events {
   position: relative;
 
-  @media screen and (max-width: $desktop-bp) {
-    //OBS for mobile, needed for correct specificity
-    margin: auto;
-  }
-
   .port-attractions-and-events__card-wrapper {
     :first-child {
       margin-top: 0 !important;

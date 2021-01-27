@@ -1,8 +1,4 @@
 .port-facilities {
-  &.port-article {
-    margin: 1.5rem 1rem;
-  }
-
   &__facilities-wrapper {
     @media screen and (min-width: $desktop-bp) {
       display: grid;
