@@ -1,0 +1,46 @@
+.port-main-wrapper {
+  .port-article {
+    margin: 0;
+    .slider-container {
+      width: 100%;
+      position: relative;
+      .slide-content {
+        img {
+        height: 30vh;
+        width: 100%;
+        object-fit: cover;
+        @media only screen and (min-width: $desktop_bp) {
+          height: 30rem;
+        }
+      }
+    }
+    .arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 45%;
+      @media only screen and (min-width: $desktop_bp) {
+        top: 40%;
+      }
+      img {
+        height: 2em;
+        @media only screen and (min-width: $desktop_bp) {
+          height: 4rem;
+        }
+      }
+    }
+    .slide {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    #arrow-left {
+      left: 0;
+      margin-left: 1em;
+    }
+    #arrow-right {
+      right: 0;
+      margin-right: 1em;
+    }
+  }
+}
+} 

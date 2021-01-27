@@ -1184,6 +1184,65 @@ a.landingPageMobileButton {
 	grid-area: booking;
 }
 
+.port-main-wrapper .port-article {
+	margin: 0;
+}
+
+.port-main-wrapper .port-article .slider-container {
+	width: 100%;
+	position: relative;
+}
+
+.port-main-wrapper .port-article .slider-container .slide-content img {
+	height: 30vh;
+	width: 100%;
+	object-fit: cover;
+}
+
+@media only screen and (min-width: 782px) {
+	.port-main-wrapper .port-article .slider-container .slide-content img {
+		height: 30rem;
+	}
+}
+
+.port-main-wrapper .port-article .slider-container .arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 45%;
+}
+
+@media only screen and (min-width: 782px) {
+	.port-main-wrapper .port-article .slider-container .arrow {
+		top: 40%;
+	}
+}
+
+.port-main-wrapper .port-article .slider-container .arrow img {
+	height: 2em;
+}
+
+@media only screen and (min-width: 782px) {
+	.port-main-wrapper .port-article .slider-container .arrow img {
+		height: 4rem;
+	}
+}
+
+.port-main-wrapper .port-article .slider-container .slide {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.port-main-wrapper .port-article .slider-container #arrow-left {
+	left: 0;
+	margin-left: 1em;
+}
+
+.port-main-wrapper .port-article .slider-container #arrow-right {
+	right: 0;
+  margin-right: 1em;
+}
+
 .personnel-card-wrapper {
 	padding-left: 1em;
 }
